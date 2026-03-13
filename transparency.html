@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEAH | Transparency & Financial Ledger</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #0c0c0c; color: #94a3b8; font-family: 'Inter', sans-serif; }
+        .data-row { border-bottom: 1px solid #1e293b; }
+        .data-row:hover { background: rgba(59, 130, 246, 0.05); }
+        .metric-box { border: 1px solid #1e293b; background: #0f172a; }
+        .live-dot {
+            height: 8px;
+            width: 8px;
+            background-color: #22c55e;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 8px;
+            box-shadow: 0 0 10px #22c55e;
+        }
+    </style>
+</head>
+<body class="p-6 md:p-12">
+
+    <header class="max-w-6xl mx-auto mb-16 border-b border-zinc-800 pb-10">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-end">
+            <div>
+                <h1 class="text-4xl font-black text-white tracking-tighter uppercase mb-2">AEAH_TRANSPARENCY</h1>
+                <p class="text-xs uppercase tracking-widest text-zinc-500 font-bold">
+                    <span class="live-dot"></span> LIVE DATA STREAM: ACTIVE // AUDIT_VERIFIED: 2026-03-13
+                </p>
+            </div>
+            <nav class="mt-6 md:mt-0 flex gap-6 text-[10px] font-black uppercase tracking-widest">
+                <a href="index.html" class="hover:text-white">Base</a>
+                <a href="governance.html" class="hover:text-white">Governance</a>
+                <a href="legal.html" class="text-blue-500 underline">War Chest</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto">
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+            <div class="metric-box p-6 rounded">
+                <span class="block text-[10px] uppercase font-bold text-zinc-500 mb-1">Total Contributions</span>
+                <span class="text-2xl font-black text-white">$4,129,044.12</span>
+            </div>
+            <div class="metric-box p-6 rounded">
+                <span class="block text-[10px] uppercase font-bold text-zinc-500 mb-1">Litigation Spend</span>
+                <span class="text-2xl font-black text-white">64.2%</span>
+            </div>
+            <div class="metric-box p-6 rounded">
+                <span class="block text-[10px] uppercase font-bold text-zinc-500 mb-1">Ops & Research</span>
+                <span class="text-2xl font-black text-white">12.8%</span>
+            </div>
+            <div class="metric-box p-6 rounded">
+                <span class="block text-[10px] uppercase font-bold text-zinc-500 mb-1">Public Safety Grant</span>
+                <span class="text-2xl font-black text-white">23.0%</span>
+            </div>
+        </div>
+
+        <section class="mb-20">
+            <h2 class="text-xs font-black text-white uppercase tracking-[0.4em] mb-6">Recent Disbursements</h2>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left text-xs uppercase tracking-tighter">
+                    <thead>
+                        <tr class="text-zinc-500 border-b border-zinc-800">
+                            <th class="py-4 font-black">Date</th>
+                            <th class="py-4 font-black">Entity</th>
+                            <th class="py-4 font-black">Purpose</th>
+                            <th class="py-4 font-black">Verification</th>
+                            <th class="py-4 text-right font-black">Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="data-row">
+                            <td class="py-4">2026-03-11</td>
+                            <td class="py-4 text-white">Latham & Watkins LLP</td>
+                            <td class="py-4">Chimera Case Discovery</td>
+                            <td class="py-4 text-blue-500 underline cursor-pointer">TXID_8829</td>
+                            <td class="py-4 text-right text-white">-$142,000.00</td>
+                        </tr>
+                        <tr class="data-row">
+                            <td class="py-4">2026-03-09</td>
+                            <td class="py-4 text-white">AWS Cloud Services</td>
+                            <td class="py-4">Public Shield Hosting</td>
+                            <td class="py-4 text-blue-500 underline cursor-pointer">TXID_0192</td>
+                            <td class="py-4 text-right text-white">-$1,422.18</td>
+                        </tr>
+                        <tr class="data-row">
+                            <td class="py-4">2026-03-05</td>
+                            <td class="py-4 text-white">Cyber-Shield Labs</td>
+                            <td class="py-4">Mobile Vulnerability Audit</td>
+                            <td class="py-4 text-blue-500 underline cursor-pointer">TXID_7710</td>
+                            <td class="py-4 text-right text-white">-$25,000.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <div class="p-8 border-2 border-red-900/30 bg-red-900/5 rounded-lg mb-12">
+            <h3 class="text-white font-bold uppercase mb-4 tracking-widest">Warrant Canary & Disclosure</h3>
+            <p class="text-sm leading-relaxed mb-6">
+                AEAH has received <span class="text-white font-bold">0</span> national security letters or gag orders to date. We have received <span class="text-white font-bold">4</span> requests for user-submitted data from state governments; <span class="text-red-500 font-bold">ALL REQUESTS WERE DENIED</span> per our Privacy Charter.
+            </p>
+            <div class="text-[10px] text-zinc-500">Last System Integrity Scan: 2026-03-13 16:29:32 EST</div>
+        </div>
+
+    </main>
+
+    <footer class="py-20 text-center">
+        <div class="text-[9px] text-zinc-700 uppercase tracking-[0.5em] mb-4">Veritas et Libertas</div>
+        <button class="border border-zinc-800 px-6 py-2 text-[10px] uppercase font-bold hover:bg-white hover:text-black transition">Download Full Annual Audit (PDF)</button>
+    </footer>
+
+</body>
+</html>
