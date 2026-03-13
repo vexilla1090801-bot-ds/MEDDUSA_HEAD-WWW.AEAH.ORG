@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEAH | Corporate Ethics Certification</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { background-color: #050505; color: #a1a1aa; }
+        .seal-card {
+            background: linear-gradient(145deg, #0f172a, #020617);
+            border: 1px solid #1e293b;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .seal-card:hover {
+            border-color: #fbbf24;
+            transform: translateY(-10px);
+        }
+        .gold-glow {
+            text-shadow: 0 0 15px rgba(251, 191, 36, 0.4);
+        }
+        .badge-verified {
+            background: rgba(251, 191, 36, 0.1);
+            color: #fbbf24;
+            border: 1px solid #fbbf24;
+        }
+    </style>
+</head>
+<body class="font-sans">
+
+    <nav class="flex justify-between items-center px-8 py-6 border-b border-zinc-900 bg-black/80 backdrop-blur-md sticky top-0 z-50">
+        <a href="index.html" class="text-xl font-bold tracking-tighter text-white">AEAH<span class="text-amber-500">.CERTIFIED</span></a>
+        <div class="hidden md:flex gap-8 text-[10px] uppercase tracking-widest font-bold">
+            <a href="exposed.html" class="hover:text-red-500 transition">The Exposed</a>
+            <a href="ledger.html" class="hover:text-white transition">The Ledger</a>
+            <a href="portal.html" class="bg-amber-500 text-black px-4 py-1 rounded-full">Get Audited</a>
+        </div>
+    </nav>
+
+    <header class="py-24 px-8 text-center bg-zinc-950">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-5xl md:text-7xl font-black text-white mb-6 uppercase tracking-tighter gold-glow">The Honor <br><span class="text-amber-500">Roll.</span></h1>
+            <p class="text-lg text-zinc-400 mb-8 leading-relaxed">
+                Accountability is a two-way street. We recognize the pioneers of <span class="text-white font-bold italic">Human-Centric Design</span>—companies that have passed our 120-point ethical audit and committed to absolute transparency.
+            </p>
+        </div>
+    </header>
+
+    <section class="max-w-7xl mx-auto px-8 py-20">
+        <div class="grid md:grid-cols-3 gap-8">
+            
+            <div class="seal-card p-10 rounded-2xl relative overflow-hidden group">
+                <div class="absolute -right-8 -top-8 w-24 h-24 bg-amber-500/10 rounded-full blur-3xl group-hover:bg-amber-500/20 transition"></div>
+                <div class="flex items-center gap-2 mb-6">
+                    <i class="fa-solid fa-award text-3xl text-amber-500"></i>
+                    <span class="badge-verified px-3 py-1 rounded-full text-[9px] font-black uppercase tracking-widest">Level 01: Guardian</span>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-4 uppercase">Veritas Messaging</h3>
+                <p class="text-sm text-zinc-500 mb-8 leading-relaxed">Passed audit for zero-data retention and algorithm-free chronological feed delivery. Verified March 2026.</p>
+                <button class="w-full py-3 border border-zinc-800 text-zinc-400 text-xs font-bold uppercase tracking-widest hover:border-amber-500 hover:text-amber-500 transition">View Audit Report</button>
+            </div>
+
+            <div class="seal-card p-10 rounded-2xl relative overflow-hidden group">
+                <div class="flex items-center gap-2 mb-6">
+                    <i class="fa-solid fa-award text-3xl text-zinc-400"></i>
+                    <span class="border border-zinc-700 text-zinc-400 px-3 py-1 rounded-full text-[9px] font-black uppercase tracking-widest">Level 02: Transparent</span>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-4 uppercase">OpenOS Hardware</h3>
+                <p class="text-sm text-zinc-500 mb-8 leading-relaxed">Certified for "Right to Disconnect" hardware switches and 100% open-source driver documentation.</p>
+                <button class="w-full py-3 border border-zinc-800 text-zinc-400 text-xs font-bold uppercase tracking-widest hover:text-white transition">View Audit Report</button>
+            </div>
+
+            <div class="seal-card p-10 rounded-2xl relative overflow-hidden group">
+                <div class="flex items-center gap-2 mb-6">
+                    <i class="fa-solid fa-award text-3xl text-zinc-400"></i>
+                    <span class="border border-zinc-700 text-zinc-400 px-3 py-1 rounded-full text-[9px] font-black uppercase tracking-widest">Level 03: Ethical Beta</span>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-4 uppercase">SocialLoop Inc.</h3>
+                <p class="text-sm text-zinc-500 mb-8 leading-relaxed">Currently in remediation. Company has removed variable-reward notifications and is implementing child-safety guardrails.</p>
+                <button class="w-full py-3 border border-zinc-800 text-zinc-400 text-xs font-bold uppercase tracking-widest hover:text-white transition">View Progress Log</button>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="bg-zinc-950 py-20 border-y border-zinc-900">
+        <div class="max-w-5xl mx-auto px-8">
+            <h2 class="text-3xl font-bold text-white mb-12 uppercase text-center">The Ethical <span class="text-amber-500">Standard</span></h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="space-y-4">
+                    <h4 class="text-white font-bold uppercase text-sm border-b border-zinc-800 pb-2">01. Data Sovereignty</h4>
+                    <p class="text-xs text-zinc-500 leading-relaxed">Users must own 100% of their biometric and behavioral data. No exceptions for "training purposes."</p>
+                </div>
+                <div class="space-y-4">
+                    <h4 class="text-white font-bold uppercase text-sm border-b border-zinc-800 pb-2">02. Cognitive Liberty</h4>
+                    <p class="text-xs text-zinc-500 leading-relaxed">Elimination of predatory UI/UX patterns designed to induce addiction or psychological distress.</p>
+                </div>
+                <div class="space-y-4">
+                    <h4 class="text-white font-bold uppercase text-sm border-b border-zinc-800 pb-2">03. Forensic Transparency</h4>
+                    <p class="text-xs text-zinc-500 leading-relaxed">All core algorithms must be available for independent audit by AEAH-vetted technical teams.</p>
+                </div>
+                <div class="space-y-4">
+                    <h4 class="text-white font-bold uppercase text-sm border-b border-zinc-800 pb-2">04. Safety by Design</h4>
+                    <p class="text-xs text-zinc-500 leading-relaxed">Security is not a premium feature. Privacy protocols must be active by default from the first boot.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 px-8 text-center text-zinc-700 text-[10px] uppercase tracking-[0.4em]">
+        Integrity is the foundation of innovation. // AEAH.ORG 2026
+    </footer>
+
+</body>
+</html>
