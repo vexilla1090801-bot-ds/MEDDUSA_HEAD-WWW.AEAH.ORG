@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEAH | Governance Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { background-color: #080808; color: #cbd5e1; }
+        .vote-card {
+            background: #111;
+            border: 1px solid #222;
+            transition: border-color 0.3s ease;
+        }
+        .vote-card:hover {
+            border-color: #3b82f6;
+        }
+        .vote-progress {
+            height: 6px;
+            background: #1e293b;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        .vote-fill {
+            height: 100%;
+            background: #3b82f6;
+        }
+    </style>
+</head>
+<body class="font-sans">
+
+    <nav class="flex justify-between items-center px-8 py-6 border-b border-zinc-900 bg-black/90 backdrop-blur-sm sticky top-0 z-50">
+        <a href="index.html" class="text-xl font-bold tracking-tighter text-white">AEAH<span class="text-blue-500">.VOX</span></a>
+        <div class="flex items-center gap-6 text-[10px] uppercase tracking-widest font-bold">
+            <span class="text-zinc-600">Member_ID: 742</span>
+            <span class="text-green-500">Voting Power: 1.0x</span>
+            <a href="dashboard.html" class="hover:text-white transition">Exit</a>
+        </div>
+    </nav>
+
+    <header class="py-16 px-8 border-b border-zinc-900">
+        <div class="max-w-5xl mx-auto">
+            <h1 class="text-4xl font-black text-white mb-4 uppercase tracking-tighter">Community <br>Directives.</h1>
+            <p class="text-zinc-500 max-w-2xl leading-relaxed">
+                The direction of AEAH is determined by those who defend it. Cast your vote on active proposals to shape our investigative priorities and legal strategy.
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-8 py-12">
+        
+        <h2 class="text-xs font-black text-blue-500 uppercase tracking-[0.4em] mb-8">Active Proposals</h2>
+
+        <div class="space-y-6">
+            
+            <div class="vote-card p-8 rounded-lg">
+                <div class="flex justify-between items-start mb-6">
+                    <div>
+                        <span class="text-[9px] font-bold text-zinc-500 uppercase tracking-widest mb-1 block">Prop_ID: #2026-009</span>
+                        <h3 class="text-xl font-bold text-white uppercase">Allocate $200k to 'Project Chimera' Litigation</h3>
+                    </div>
+                    <span class="bg-blue-900/30 text-blue-400 text-[9px] px-2 py-1 font-bold rounded">48H REMAINING</span>
+                </div>
+                <p class="text-sm text-zinc-400 mb-8">Should we increase the legal war chest for the upcoming class-action suit against unauthorized background audio sampling?</p>
+                
+                <div class="space-y-4 mb-8">
+                    <div>
+                        <div class="flex justify-between text-[10px] uppercase font-bold mb-1">
+                            <span>In Favor (Yes)</span>
+                            <span>78%</span>
+                        </div>
+                        <div class="vote-progress"><div class="vote-fill" style="width: 78%"></div></div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-[10px] uppercase font-bold mb-1">
+                            <span>Against (No)</span>
+                            <span>22%</span>
+                        </div>
+                        <div class="vote-progress"><div class="vote-fill bg-zinc-700" style="width: 22%"></div></div>
+                    </div>
+                </div>
+
+                <div class="flex gap-4">
+                    <button class="flex-1 bg-blue-600 text-white py-3 text-[10px] font-black uppercase tracking-widest hover:bg-blue-500 transition">Confirm Vote: Yes</button>
+                    <button class="flex-1 border border-zinc-700 text-zinc-400 py-3 text-[10px] font-black uppercase tracking-widest hover:bg-zinc-800 transition">Confirm Vote: No</button>
+                </div>
+            </div>
+
+            <div class="vote-card p-8 rounded-lg opacity-60">
+                <div class="flex justify-between items-start mb-6">
+                    <div>
+                        <span class="text-[9px] font-bold text-zinc-500 uppercase tracking-widest mb-1 block">Prop_ID: #2026-008</span>
+                        <h3 class="text-xl font-bold text-white uppercase">New Resource: "AI Deepfake Verification Kit"</h3>
+                    </div>
+                    <span class="bg-green-900/30 text-green-400 text-[9px] px-2 py-1 font-bold rounded">PASSED</span>
+                </div>
+                <p class="text-sm text-zinc-400">Development of the manual for identifying AI-assisted phishing has been approved by the community.</p>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="py-12 text-center text-[9px] text-zinc-800 uppercase tracking-[0.6em]">
+        Democracy is the ultimate firewall. // AEAH.ORG 2026
+    </footer>
+
+</body>
+</html>
