@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEAH | Design System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #020202; color: #a1a1aa; font-family: 'Inter', 'Space Mono', monospace; }
+        .swatch { height: 100px; border-radius: 4px; border: 1px solid #27272a; }
+        .font-spec { font-family: 'Space Mono', monospace; }
+        .component-preview { border: 1px solid #18181b; background: #09090b; padding: 2rem; border-radius: 8px; }
+    </style>
+</head>
+<body class="p-8 md:p-20">
+
+    <header class="max-w-5xl mx-auto mb-20">
+        <h1 class="text-xs font-black text-blue-500 uppercase tracking-[0.5em] mb-4">Internal Specification</h1>
+        <h2 class="text-4xl font-black text-white uppercase tracking-tighter">The Visual <br>Language of Truth.</h2>
+    </header>
+
+    <main class="max-w-5xl mx-auto space-y-24">
+
+        <section>
+            <h3 class="text-white font-bold uppercase text-sm mb-8 border-b border-zinc-800 pb-2">01. Color Palette</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div>
+                    <div class="swatch bg-[#3b82f6]"></div>
+                    <div class="mt-2 text-[10px] font-bold">SENTINEL_BLUE (#3b82f6)</div>
+                </div>
+                <div>
+                    <div class="swatch bg-[#020202]"></div>
+                    <div class="mt-2 text-[10px] font-bold">VOID_BLACK (#020202)</div>
+                </div>
+                <div>
+                    <div class="swatch bg-[#18181b]"></div>
+                    <div class="mt-2 text-[10px] font-bold">ZINC_BASE (#18181b)</div>
+                </div>
+                <div>
+                    <div class="swatch bg-[#ef4444]"></div>
+                    <div class="mt-2 text-[10px] font-bold">ALERT_RED (#ef4444)</div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h3 class="text-white font-bold uppercase text-sm mb-8 border-b border-zinc-800 pb-2">02. Typography</h3>
+            <div class="space-y-8">
+                <div>
+                    <p class="text-[10px] text-zinc-500 uppercase mb-2">Primary Header (Inter Black)</p>
+                    <p class="text-5xl font-black text-white uppercase tracking-tighter italic">HUMAN_PROTOCOL</p>
+                </div>
+                <div>
+                    <p class="text-[10px] text-zinc-500 uppercase mb-2">Technical Data (Space Mono)</p>
+                    <p class="font-spec text-blue-500 text-lg">LOG_ENTRY: Verified_Threat_Detected</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h3 class="text-white font-bold uppercase text-sm mb-8 border-b border-zinc-800 pb-2">03. UI Elements</h3>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="component-preview flex flex-col items-start gap-4">
+                    <span class="text-[9px] text-zinc-600 uppercase">Primary CTA</span>
+                    <button class="bg-blue-600 text-white px-8 py-3 text-[10px] font-black uppercase tracking-widest hover:bg-blue-500 transition">Initiate Protocol</button>
+                </div>
+                <div class="component-preview flex flex-col items-start gap-4">
+                    <span class="text-[9px] text-zinc-600 uppercase">Secondary Ghost</span>
+                    <button class="border border-zinc-800 text-zinc-400 px-8 py-3 text-[10px] font-black uppercase tracking-widest hover:bg-white hover:text-black transition">Access Ledger</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="mt-32 py-12 text-center border-t border-zinc-900">
+        <p class="text-[9px] text-zinc-800 uppercase tracking-[0.5em]">System Consistency: 100% // AEAH.ORG 2026</p>
+    </footer>
+
+</body>
+</html>
