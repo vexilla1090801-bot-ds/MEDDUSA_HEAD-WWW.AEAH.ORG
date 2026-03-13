@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEAH | The Daily Signal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #fbfbfb; color: #1a1a1a; font-family: 'Georgia', serif; }
+        .mono { font-family: 'Space Mono', monospace; }
+        .headline { font-family: 'Inter', sans-serif; font-weight: 900; line-height: 0.9; text-transform: uppercase; }
+        .category-tag { background: #000; color: #fff; padding: 2px 8px; font-size: 10px; font-weight: 900; }
+        .sidebar-border { border-left: 1px solid #e5e5e5; }
+        .featured-article { border-bottom: 4px solid #000; padding-bottom: 2rem; }
+    </style>
+</head>
+<body class="p-4 md:p-10">
+
+    <header class="max-w-7xl mx-auto mb-12 border-b-2 border-black pb-4 text-center">
+        <div class="flex justify-between items-center mb-6 px-2">
+            <span class="mono text-[10px] font-bold uppercase">Vol. 01 // No. 44</span>
+            <h1 class="text-5xl md:text-7xl font-black uppercase tracking-tighter headline">The Signal</h1>
+            <span class="mono text-[10px] font-bold uppercase">March 13, 2026</span>
+        </div>
+        <nav class="flex justify-center gap-8 text-[10px] font-black uppercase tracking-widest border-t border-zinc-200 pt-4">
+            <a href="#" class="hover:text-blue-600">Investigations</a>
+            <a href="#" class="hover:text-blue-600">Policy</a>
+            <a href="#" class="hover:text-blue-600">Op-Ed</a>
+            <a href="#" class="hover:text-blue-600">The Guard</a>
+            <a href="index.html" class="text-zinc-400">Back to Base</a>
+        </nav>
+    </header>
+
+    <main class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12">
+        
+        <div class="lg:col-span-8">
+            <article class="featured-article mb-12">
+                <span class="category-tag mb-4 inline-block">INVESTIGATION</span>
+                <h2 class="text-4xl md:text-6xl headline mb-6">The Silicon Shadow: How Predictive Sentencing Escaped the Courtroom.</h2>
+                <p class="text-xl leading-snug text-zinc-700 mb-6 italic">
+                    "A three-month deep dive into the algorithmic black boxes currently deciding your credit limit, your insurance premiums, and your next job interview."
+                </p>
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-10 h-10 bg-zinc-200 rounded-full"></div>
+                    <div>
+                        <p class="text-[10px] font-bold uppercase">By Julian Vane</p>
+                        <p class="text-[9px] text-zinc-500 uppercase">Lead Investigator</p>
+                    </div>
+                </div>
+                <div class="bg-zinc-100 h-96 w-full flex items-center justify-center text-zinc-400 uppercase tracking-widest font-bold border border-zinc-200">
+                    [Featured_Imagery_Data_Visualization]
+                </div>
+            </article>
+
+            <div class="grid md:grid-cols-2 gap-10">
+                <section>
+                    <span class="category-tag mb-2 inline-block">OP-ED</span>
+                    <h3 class="text-xl font-black headline mb-2">Why Your 'Privacy Settings' Are a Psychological Trap.</h3>
+                    <p class="text-sm text-zinc-600 leading-relaxed">The illusion of choice in modern UX is designed to exhaust you into compliance...</p>
+                </section>
+                <section>
+                    <span class="category-tag mb-2 inline-block">POLICY</span>
+                    <h3 class="text-xl font-black headline mb-2">The Bio-Sovereignty Bill: What You Need to Know.</h3>
+                    <p class="text-sm text-zinc-600 leading-relaxed">Breaking down the 400-page document currently sitting on the Senate floor...</p>
+                </section>
+            </div>
+        </div>
+
+        <aside class="lg:col-span-4 sidebar-border pl-0 lg:pl-10">
+            <h4 class="text-xs font-black uppercase tracking-[0.3em] mb-8 border-b border-black pb-2">Latest Despatches</h4>
+            <div class="space-y-8">
+                <div class="border-b border-zinc-100 pb-4">
+                    <span class="mono text-[9px] text-blue-600 font-bold uppercase">14:22 PM</span>
+                    <h5 class="text-sm font-black uppercase mt-1">Berlin Hub reports 500% spike in hardware audits.</h5>
+                </div>
+                <div class="border-b border-zinc-100 pb-4">
+                    <span class="mono text-[9px] text-blue-600 font-bold uppercase">11:05 AM</span>
+                    <h5 class="text-sm font-black uppercase mt-1">AEAH Legal issues formal cease-and-desist to [REDACTED] Corp.</h5>
+                </div>
+                <div class="border-b border-zinc-100 pb-4">
+                    <span class="mono text-[9px] text-blue-600 font-bold uppercase">08:30 AM</span>
+                    <h5 class="text-sm font-black uppercase mt-1">New toolkit: 'How to bypass ultrasonic tracking'.</h5>
+                </div>
+            </div>
+
+            <div class="mt-16 p-6 bg-black text-white rounded">
+                <h4 class="headline text-lg mb-4">Support the signal.</h4>
+                <p class="text-xs leading-relaxed text-zinc-400 mb-6 uppercase tracking-widest">No ads. No sponsors. Just the truth. Help us keep the signal clear.</p>
+                <button class="w-full bg-white text-black py-3 text-[10px] font-black uppercase tracking-widest hover:bg-blue-600 hover:text-white transition">Donate Monthly</button>
+            </div>
+        </aside>
+
+    </main>
+
+    <footer class="mt-24 border-t-2 border-black pt-8 text-center">
+        <p class="mono text-[10px] font-bold uppercase tracking-[0.5em]">The Signal Never Ends // AEAH.ORG 2026</p>
+    </footer>
+
+</body>
+</html>
