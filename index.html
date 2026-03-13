@@ -3,158 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AEAH.ORG | SEXYHEROS.ORG - Defending Human Dignity</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <title>AEAH | Safeguarding the Human Experience</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root {
-            --aeah-blue: #004e92;
-            --aeah-silver: #c0c0c0;
-            --sexy-pink: #ff2d75;
-            --dark-bg: #0a0a0a;
-            --white: #ffffff;
+        body { background-color: #0a0a0a; color: #e5e5e5; }
+        .hero-gradient {
+            background: radial-gradient(circle at center, #1a1a1a 0%, #0a0a0a 100%);
         }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body, html {
-            height: 100%;
-            font-family: 'Inter', sans-serif;
-            background-color: var(--dark-bg);
-            color: var(--white);
-            overflow: hidden;
-        }
-
-        .container {
-            display: flex;
-            height: 100vh;
-            width: 100vw;
-            flex-direction: row;
-        }
-
-        /* Split Screen Styles */
-        .split {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            padding: 5%;
-            transition: all 0.5s ease;
-            position: relative;
-            text-align: center;
-        }
-
-        /* Left Side: AEAH */
-        .aeah {
-            background: linear-gradient(135deg, #000428 0%, #004e92 100%);
-            border-right: 2px solid rgba(255,255,255,0.1);
-        }
-
-        /* Right Side: SEXYHEROS */
-        .sexyheros {
-            background: linear-gradient(135deg, #0a0a0a 0%, #2d0a1a 100%);
-        }
-
-        .logo {
-            max-width: 280px;
-            margin-bottom: 20px;
-            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
-        }
-
-        h2 {
-            font-size: 2.5rem;
-            font-weight: 900;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        p {
-            font-size: 1.1rem;
-            max-width: 400px;
-            line-height: 1.6;
-            margin-bottom: 30px;
-            opacity: 0.9;
-        }
-
-        .btn {
-            text-decoration: none;
-            padding: 15px 40px;
-            border-radius: 50px;
-            font-weight: bold;
-            text-transform: uppercase;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .btn-blue {
-            background-color: var(--white);
-            color: var(--aeah-blue);
-        }
-
-        .btn-pink {
-            background-color: var(--sexy-pink);
-            color: var(--white);
-            box-shadow: 0 0 20px rgba(255, 45, 117, 0.4);
-        }
-
-        .btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.4);
-        }
-
-        /* Middle Divider Decor */
-        .divider {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 10;
-            background: var(--white);
-            color: #000;
-            padding: 10px;
-            border-radius: 50%;
-            font-weight: bold;
-            font-size: 0.8rem;
-        }
-
-        /* Mobile Optimization */
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-            }
-            .split {
-                height: 50vh;
-            }
-            h2 { font-size: 1.8rem; }
-            .logo { max-width: 180px; }
-            .divider { display: none; }
-        }
+        .accent-border { border-bottom: 2px solid #3b82f6; }
     </style>
 </head>
-<body>
+<body class="font-sans">
 
-    <div class="container">
-        <div class="divider">VS</div>
+    <nav class="flex justify-between items-center px-8 py-6 bg-black border-b border-gray-800 sticky top-0 z-50">
+        <div class="text-2xl font-bold tracking-tighter text-white">
+            AEAH<span class="text-blue-500">.ORG</span>
+        </div>
+        <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-medium">
+            <a href="#" class="hover:text-blue-500 transition">The Mission</a>
+            <a href="#" class="hover:text-blue-500 transition">Tech Safety</a>
+            <a href="#" class="hover:text-blue-500 transition">Resources</a>
+            <a href="#" class="border border-blue-500 px-4 py-1 text-blue-500 hover:bg-blue-500 hover:text-white transition">Take Action</a>
+        </div>
+    </nav>
 
-        <section class="split aeah">
-            <img src="Sexyheros.org.png" alt="Sexyheros.org.png" class="logo">
-            <h2>The Shield</h2>
-            <p>Against Electronic Abuse & Harassment. Legal advocacy, medical research, and cybersecurity for the modern victim.</p>
-            <a href="#aeah-portal" class="btn btn-blue">Enter Defense</a>
-        </section>
+    <header class="hero-gradient h-screen flex flex-col justify-center items-center text-center px-4">
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight text-white">
+            TECHNOLOGY SHOULD <br><span class="text-blue-600">NOT BE A WEAPON.</span>
+        </h1>
+        <p class="max-w-2xl text-lg md:text-xl text-gray-400 mb-10 leading-relaxed">
+            AEAH is dedicated to the ethical oversight of emerging technology. We stand as a barrier between innovation and harm, ensuring that progress never comes at the cost of human safety.
+        </p>
+        <div class="flex flex-col md:flex-row gap-4">
+            <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-sm transition duration-300">
+                REPORT AN ISSUE
+            </button>
+            <button class="bg-transparent border border-gray-600 hover:border-white text-white font-bold py-4 px-10 rounded-sm transition duration-300">
+                LEARN THE RISKS
+            </button>
+        </div>
+    </header>
 
-        <section class="split sexyheros">
-            <img src="sexyheros_logo.png" alt="SexyHeros Logo" class="logo">
-            <h2>The Mission</h2>
-            <p>Reclaiming Goodness. A women-led program tackling tech addiction and device dependency. Turning "test subjects" into heroes.</p>
-            <a href="#sexy-portal" class="btn btn-pink">Enter Recovery</a>
-        </section>
-    </div>
+    <section class="py-24 px-8 bg-zinc-900">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
+            <div class="space-y-4">
+                <i class="fa-solid fa-shield-halved text-4xl text-blue-500"></i>
+                <h3 class="text-xl font-bold text-white uppercase tracking-wider">User Protection</h3>
+                <p class="text-gray-400 leading-relaxed">We identify and mitigate digital threats that target individuals, focusing on psychological and physical safety in a connected world.</p>
+            </div>
+            <div class="space-y-4">
+                <i class="fa-solid fa-microchip text-4xl text-blue-500"></i>
+                <h3 class="text-xl font-bold text-white uppercase tracking-wider">Ethical Engineering</h3>
+                <p class="text-gray-400 leading-relaxed">Advocating for "Safety by Design." We work with developers to ensure technology is built with human-first guardrails from day one.</p>
+            </div>
+            <div class="space-y-4">
+                <i class="fa-solid fa-eye text-4xl text-blue-500"></i>
+                <h3 class="text-xl font-bold text-white uppercase tracking-wider">Public Vigilance</h3>
+                <p class="text-gray-400 leading-relaxed">Exposing the misuse of tech. When platforms or tools are used to exploit or harm, AEAH sounds the alarm.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-black border-y border-zinc-800">
+        <div class="max-w-4xl mx-auto text-center px-6">
+            <h2 class="text-3xl font-bold mb-6 italic text-gray-200">"We don't want people hurting themselves... and we won't let tech be used to hurt others."</h2>
+            <div class="w-24 h-1 bg-blue-600 mx-auto mb-8"></div>
+            <p class="text-gray-500 uppercase tracking-[0.2em] text-sm">The AEAH Mandate</p>
+        </div>
+    </section>
+
+    <footer class="py-12 px-8 bg-black text-gray-600 text-sm">
+        <div class="max-w-6xl mx-auto flex flex-col md:row justify-between items-center border-t border-zinc-900 pt-8">
+            <p>&copy; 2026 AEAH.ORG | ADVOCATING FOR ETHICAL ARTIFICIAL & HUMAN INTERACTION</p>
+            <div class="flex space-x-6 mt-4 md:mt-0">
+                <a href="#" class="hover:text-white">Privacy Protocol</a>
+                <a href="#" class="hover:text-white">Terms of Engagement</a>
+                <a href="#" class="hover:text-white">Contact</a>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
-
