@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEAH | Secure Access</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { background-color: #030303; color: #e5e5e5; }
+        .login-box {
+            background: #0a0a0a;
+            border: 1px solid #1a1a1a;
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+        }
+        .scanner-bar {
+            width: 100%;
+            height: 1px;
+            background: #3b82f6;
+            position: absolute;
+            top: 0;
+            animation: scan 4s infinite ease-in-out;
+        }
+        @keyframes scan {
+            0% { top: 0; opacity: 0; }
+            50% { opacity: 1; }
+            100% { top: 100%; opacity: 0; }
+        }
+        .input-glow:focus {
+            box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+            border-color: #3b82f6;
+            outline: none;
+        }
+    </style>
+</head>
+<body class="h-screen flex items-center justify-center font-sans px-4">
+
+    <div class="max-w-md w-full login-box p-10 relative overflow-hidden rounded-lg">
+        <div class="scanner-bar"></div>
+        
+        <div class="text-center mb-10">
+            <div class="text-3xl font-black tracking-tighter text-white mb-2">
+                AEAH<span class="text-blue-600">.ID</span>
+            </div>
+            <p class="text-[10px] uppercase tracking-[0.3em] text-zinc-500 font-bold">Encrypted Access Only</p>
+        </div>
+
+        <form class="space-y-6">
+            <div>
+                <label class="text-[10px] uppercase font-bold text-zinc-400 mb-2 block">Agent Credentials</label>
+                <input type="text" placeholder="USER_ID_OR_ALIAS" class="w-full bg-zinc-900 border border-zinc-800 p-4 text-sm text-white input-glow transition">
+            </div>
+            
+            <div>
+                <label class="text-[10px] uppercase font-bold text-zinc-400 mb-2 block">Security Token</label>
+                <input type="password" placeholder="••••••••••••" class="w-full bg-zinc-900 border border-zinc-800 p-4 text-sm text-white input-glow transition">
+            </div>
+
+            <div class="flex items-center justify-between">
+                <label class="flex items-center text-[10px] text-zinc-500 uppercase cursor-pointer">
+                    <input type="checkbox" class="mr-2 bg-zinc-900 border-zinc-800"> Maintain Session
+                </label>
+                <a href="#" class="text-[10px] text-blue-500 hover:underline uppercase font-bold">Lost Token?</a>
+            </div>
+
+            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-black py-4 uppercase tracking-widest text-xs transition duration-300">
+                Authenticate Access
+            </button>
+        </form>
+
+        <div class="mt-8 pt-6 border-t border-zinc-900 text-center">
+            <p class="text-[9px] text-zinc-600 leading-relaxed uppercase">
+                Unauthorized access is a violation of the Digital Sovereignty Act. <br> 
+                All IP addresses are logged and verified against the <span class="text-blue-600">AEAH Registry</span>.
+            </p>
+        </div>
+    </div>
+
+    <div class="fixed bottom-10 right-10 text-[10px] text-zinc-900 hidden lg:block uppercase tracking-widest font-black leading-tight">
+        Protocol_v4.2 // Security_Alpha <br>
+        Node: Philadelphia_Central
+    </div>
+
+</body>
+</html>
