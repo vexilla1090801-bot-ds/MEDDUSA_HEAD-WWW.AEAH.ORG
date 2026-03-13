@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEAH | Tactical Gear</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { background-color: #0a0a0a; color: #f4f4f5; }
+        .product-card {
+            background: #000;
+            border: 1px solid #18181b;
+            transition: all 0.3s ease;
+        }
+        .product-card:hover {
+            border-color: #3f3f46;
+            transform: translateY(-5px);
+        }
+        .badge-new {
+            background: #3b82f6;
+            color: #fff;
+            font-size: 8px;
+            font-weight: 900;
+            padding: 2px 6px;
+            text-transform: uppercase;
+        }
+        .price-tag {
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body class="font-sans">
+
+    <nav class="flex justify-between items-center px-10 py-8 border-b border-zinc-900 sticky top-0 bg-black/90 backdrop-blur-md z-50">
+        <div class="text-xl font-black tracking-tighter uppercase">AEAH<span class="text-zinc-500">_GEAR</span></div>
+        <div class="flex gap-8 text-[10px] font-bold uppercase tracking-widest text-zinc-400">
+            <a href="index.html" class="hover:text-white transition">Base</a>
+            <a href="#" class="hover:text-white transition">Cart (0)</a>
+        </div>
+    </nav>
+
+    <header class="py-20 px-10 text-center border-b border-zinc-900">
+        <h1 class="text-6xl font-black tracking-tighter uppercase mb-4">Physical <span class="text-zinc-600">Armor.</span></h1>
+        <p class="text-xs uppercase tracking-[0.4em] text-zinc-500">Analog Solutions for a Digital War.</p>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-10 py-20">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+            
+            <div class="product-card p-4 rounded-sm">
+                <div class="aspect-square bg-zinc-900 mb-6 flex items-center justify-center relative">
+                    <span class="badge-new absolute top-4 left-4">Limited Edition</span>
+                    <i class="fa-solid fa-vest text-6xl text-zinc-800"></i>
+                </div>
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="text-sm font-black uppercase tracking-tight">The Sentry Faraday Pouch</h3>
+                    <span class="price-tag text-blue-500">$45.00</span>
+                </div>
+                <p class="text-[10px] text-zinc-500 uppercase mb-6">Military-grade signal blocking for mobile devices. Zero leakage.</p>
+                <button class="w-full bg-white text-black py-4 text-[10px] font-black uppercase tracking-widest hover:bg-blue-600 hover:text-white transition">Add to Kit</button>
+            </div>
+
+            <div class="product-card p-4 rounded-sm">
+                <div class="aspect-square bg-zinc-900 mb-6 flex items-center justify-center">
+                    <i class="fa-solid fa-eye-slash text-6xl text-zinc-800"></i>
+                </div>
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="text-sm font-black uppercase tracking-tight">Optic-Slide (3-Pack)</h3>
+                    <span class="price-tag text-blue-500">$15.00</span>
+                </div>
+                <p class="text-[10px] text-zinc-500 uppercase mb-6">Ultra-thin physical camera covers for laptops and tablets.</p>
+                <button class="w-full bg-white text-black py-4 text-[10px] font-black uppercase tracking-widest hover:bg-blue-600 hover:text-white transition">Add to Kit</button>
+            </div>
+
+            <div class="product-card p-4 rounded-sm">
+                <div class="aspect-square bg-zinc-900 mb-6 flex items-center justify-center relative">
+                    <span class="badge-new absolute top-4 left-4">Restocked</span>
+                    <i class="fa-solid fa-shirt text-6xl text-zinc-800"></i>
+                </div>
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="text-sm font-black uppercase tracking-tight">"Human Protocol" Hoodie</h3>
+                    <span class="price-tag text-blue-500">$85.00</span>
+                </div>
+                <p class="text-[10px] text-zinc-500 uppercase mb-6">Heavyweight cotton. Minimalist AEAH branding on spine.</p>
+                <button class="w-full bg-white text-black py-4 text-[10px] font-black uppercase tracking-widest hover:bg-blue-600 hover:text-white transition">Add to Kit</button>
+            </div>
+
+        </div>
+    </main>
+
+    <section class="py-20 bg-zinc-950 border-y border-zinc-900 px-10">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-[10px] font-black text-blue-500 uppercase tracking-[0.5em] mb-6">Revenue Transparency</h2>
+            <p class="text-sm text-zinc-500 leading-relaxed uppercase">
+                100% of proceeds from the AEAH Gear Shop go directly to the <a href="legal.html" class="text-white underline">Legal Defense Fund</a>. 
+                We do not use plastic packaging. We do not track your order via third-party cookies.
+            </p>
+        </div>
+    </section>
+
+    <footer class="py-12 text-center text-[9px] text-zinc-800 uppercase tracking-[0.6em]">
+        Protect the biological core. // AEAH.ORG 2026
+    </footer>
+
+</body>
+</html>
