@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEAH | Investigation Dossiers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { background-color: #0d0d0d; color: #a1a1aa; font-family: 'Courier New', Courier, monospace; }
+        .dossier-card {
+            background-color: #141414;
+            border: 1px solid #222;
+            position: relative;
+            overflow: hidden;
+        }
+        .dossier-card::before {
+            content: "CONFIDENTIAL";
+            position: absolute;
+            top: 10px;
+            right: -30px;
+            transform: rotate(45deg);
+            background: #450a0a;
+            color: #ef4444;
+            font-size: 10px;
+            padding: 2px 40px;
+            font-weight: bold;
+        }
+        .file-tab {
+            clip-path: polygon(0 0, 80% 0, 100% 100%, 0% 100%);
+            background: #222;
+        }
+        .scanline {
+            width: 100%;
+            height: 1px;
+            background: rgba(59, 130, 246, 0.2);
+            position: absolute;
+            animation: scan 4s linear infinite;
+        }
+        @keyframes scan {
+            0% { top: 0; }
+            100% { top: 100%; }
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <header class="max-w-6xl mx-auto mb-16 flex flex-col md:flex-row justify-between items-end border-b border-zinc-800 pb-8">
+        <div>
+            <h1 class="text-3xl font-bold text-white tracking-tighter uppercase">Investigation_Logs.exe</h1>
+            <p class="text-xs text-blue-500 mt-2">ACTIVE CASELOAD: 04 // TOTAL ARCHIVED: 142</p>
+        </div>
+        <nav class="flex gap-6 mt-6 md:mt-0 text-[10px] uppercase tracking-widest">
+            <a href="index.html" class="hover:text-white">Home</a>
+            <a href="exposed.html" class="hover:text-white text-red-500 font-bold underline">! Threats</a>
+            <a href="portal.html" class="hover:text-white">Secure_Upload</a>
+        </nav>
+    </header>
+
+    <main class="max-w-6xl mx-auto grid gap-12">
+        
+        <div class="dossier-card p-6 md:p-10 transition hover:border-blue-900/50">
+            <div class="scanline"></div>
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/3 space-y-4">
+                    <div class="file-tab w-32 py-1 px-4 text-[10px] font-black text-white">CASE_8829</div>
+                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=400&q=80" alt="Tech Analysis" class="grayscale contrast-125 opacity-50 border border-zinc-800">
+                    <div class="text-[10px] space-y-1">
+                        <p>SUBJECT: Project Chimera</p>
+                        <p>STATUS: <span class="text-red-500 italic">ONGOING_LITIGATION</span></p>
+                        <p>VECTOR: Neural Data Harvesting</p>
+                        <p>THREAT_SCORE: 9.4/10</p>
+                    </div>
+                </div>
+                <div class="md:w-2/3">
+                    <h2 class="text-2xl font-black text-white uppercase mb-4 tracking-tight">The "Silent Listener" Exploitation</h2>
+                    <p class="text-sm leading-relaxed mb-6">
+                        Investigation into a major smart-home ecosystem revealed unauthorized background audio processing. Analysis of the firmware indicates the device was sampling conversations even when "Privacy Mode" was toggled on. AEAH has traced these data packets to third-party ad brokers in unregulated territories.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div class="border border-zinc-800 p-3 bg-black/40">
+                            <span class="block text-[10px] text-zinc-600 mb-1 uppercase">Evidence_01</span>
+                            <span class="text-xs text-blue-400 underline cursor-pointer">packet_capture_log.txt</span>
+                        </div>
+                        <div class="border border-zinc-800 p-3 bg-black/40">
+                            <span class="block text-[10px] text-zinc-600 mb-1 uppercase">Evidence_02</span>
+                            <span class="text-xs text-blue-400 underline cursor-pointer">binary_dump_v4.pdf</span>
+                        </div>
+                    </div>
+                    <button class="bg-blue-600/10 border border-blue-600 text-blue-500 px-6 py-2 text-xs font-bold uppercase tracking-widest hover:bg-blue-600 hover:text-white transition">Read Full Dossier</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="dossier-card p-6 md:p-10 opacity-70">
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/3 space-y-4">
+                    <div class="file-tab w-32 py-1 px-4 text-[10px] font-black text-white">CASE_7410</div>
+                    <div class="h-40 bg-zinc-900 border border-zinc-800 flex items-center justify-center italic text-[10px] text-zinc-700">Visual_Data_Redacted</div>
+                </div>
+                <div class="md:w-2/3">
+                    <h2 class="text-2xl font-black text-zinc-400 uppercase mb-4 tracking-tight">Predictive Policing Algorithm Bias</h2>
+                    <p class="text-sm leading-relaxed mb-6">
+                        Archived Case: AEAH successfully challenged the deployment of the 'Sentinel' risk-assessment tool. Our audit proved a 42% false-positive rate for marginalized demographics. The software was decommissioned following our public report.
+                    </p>
+                    <span class="text-[10px] font-bold text-green-500 uppercase border border-green-500 px-2 py-1">Resolution: Success</span>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="max-w-6xl mx-auto mt-20 pt-8 border-t border-zinc-900 flex justify-between text-[9px] text-zinc-700 uppercase">
+        <div>System_State: Vigilant</div>
+        <div>All logs are timestamped and cryptographically signed.</div>
+    </footer>
+
+</body>
+</html>
