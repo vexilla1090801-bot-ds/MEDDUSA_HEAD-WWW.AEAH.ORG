@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEAH | Academy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { background-color: #030303; color: #94a3b8; font-family: 'Inter', sans-serif; }
+        .course-card {
+            background: #0a0a0a;
+            border: 1px solid #1a1a1a;
+            transition: all 0.3s ease;
+        }
+        .course-card:hover {
+            border-color: #3b82f6;
+            background: #0f172a;
+        }
+        .progress-bar {
+            height: 4px;
+            background: #1e293b;
+            border-radius: 2px;
+        }
+        .progress-fill {
+            height: 100%;
+            background: #3b82f6;
+            width: 0%;
+        }
+    </style>
+</head>
+<body class="p-6 md:p-12">
+
+    <nav class="max-w-6xl mx-auto flex justify-between items-center mb-16 border-b border-zinc-900 pb-6">
+        <div class="text-xl font-black text-white uppercase tracking-tighter">AEAH<span class="text-blue-500">_ACADEMY</span></div>
+        <div class="flex gap-8 text-[10px] font-bold uppercase tracking-widest text-zinc-500">
+            <a href="dashboard.html" class="hover:text-white transition">My Student Profile</a>
+            <a href="index.html" class="hover:text-white transition">Exit</a>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto">
+        <header class="mb-16">
+            <h1 class="text-4xl font-black text-white uppercase tracking-tight mb-4">Weaponize Your <span class="text-blue-500">Intellect.</span></h1>
+            <p class="text-lg text-zinc-500 max-w-2xl leading-relaxed">
+                Knowledge is the only firewall that never expires. Enroll in our specialized tracks to learn the mechanics of digital liberation.
+            </p>
+        </header>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <div class="course-card p-8 rounded-xl flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-start mb-6">
+                        <i class="fa-solid fa-code text-blue-500 text-2xl"></i>
+                        <span class="text-[9px] font-black bg-blue-900/30 text-blue-400 px-2 py-1 rounded">ENROLLED</span>
+                    </div>
+                    <h3 class="text-white font-bold text-lg uppercase mb-2">Anti-Engagement UX Design</h3>
+                    <p class="text-xs text-zinc-500 leading-relaxed mb-6">Learn to build interfaces that respect user time and mental health by eliminating dark patterns.</p>
+                </div>
+                <div class="mt-auto">
+                    <div class="flex justify-between text-[10px] uppercase font-bold mb-2">
+                        <span>Progress</span>
+                        <span>45%</span>
+                    </div>
+                    <div class="progress-bar mb-6"><div class="progress-fill" style="width: 45%"></div></div>
+                    <button class="w-full bg-white text-black py-3 text-[10px] font-black uppercase tracking-widest hover:bg-blue-600 hover:text-white transition">Continue Lesson</button>
+                </div>
+            </div>
+
+            <div class="course-card p-8 rounded-xl flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-start mb-6">
+                        <i class="fa-solid fa-shield-halved text-zinc-600 text-2xl"></i>
+                        <span class="text-[9px] font-black border border-zinc-800 text-zinc-600 px-2 py-1 rounded">LOCKED</span>
+                    </div>
+                    <h3 class="text-white font-bold text-lg uppercase mb-2">Biometric Counter-Forensics</h3>
+                    <p class="text-xs text-zinc-500 leading-relaxed mb-6">Technical protocols for protecting biological data in the age of omnipresent surveillance.</p>
+                </div>
+                <button class="w-full border border-zinc-800 text-zinc-500 py-3 text-[10px] font-black uppercase tracking-widest cursor-not-allowed">Requires Level 02</button>
+            </div>
+
+            <div class="course-card p-8 rounded-xl flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-start mb-6">
+                        <i class="fa-solid fa-gavel text-blue-500 text-2xl"></i>
+                        <span class="text-[9px] font-black bg-zinc-900 text-zinc-400 px-2 py-1 rounded">NEW</span>
+                    </div>
+                    <h3 class="text-white font-bold text-lg uppercase mb-2">Digital Rights Advocacy</h3>
+                    <p class="text-xs text-zinc-500 leading-relaxed mb-6">How to draft local ordinances and organize effective legislative lobbying for tech reform.</p>
+                </div>
+                <button class="w-full bg-blue-600 text-white py-3 text-[10px] font-black uppercase tracking-widest hover:bg-blue-500 transition">Begin Course</button>
+            </div>
+
+        </div>
+
+        <section class="mt-24 p-12 bg-zinc-950 border border-zinc-900 rounded-2xl flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-2/3">
+                <h2 class="text-2xl font-black text-white uppercase mb-4">Earn Your AEAH Credentials.</h2>
+                <p class="text-sm text-zinc-500 leading-relaxed">
+                    Graduating from an Academy track grants you a verified cryptographic credential on <a href="ledger.html" class="text-blue-500 underline">The Ledger</a>. Use this to prove your commitment to ethical tech to employers and partners.
+                </p>
+            </div>
+            <div class="md:w-1/3 text-center">
+                <i class="fa-solid fa-certificate text-6xl text-blue-900/20 mb-4"></i>
+                <div class="text-[10px] font-bold text-zinc-600 uppercase tracking-widest">Authorized Certification Body</div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="mt-20 py-12 text-center text-[10px] text-zinc-800 uppercase tracking-[0.5em]">
+        Education is the ultimate defense. // AEAH.ORG 2026
+    </footer>
+
+</body>
+</html>
