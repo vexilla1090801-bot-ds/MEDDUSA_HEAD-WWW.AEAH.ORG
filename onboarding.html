@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEAH | Agent Onboarding</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #030303; color: #a1a1aa; font-family: 'Inter', sans-serif; }
+        .briefing-card {
+            background: #0a0a0a;
+            border-left: 4px solid #3b82f6;
+            transition: all 0.3s ease;
+        }
+        .briefing-card:hover {
+            background: #111;
+            border-left-width: 8px;
+        }
+        .typewriter {
+            overflow: hidden;
+            border-right: .15em solid #3b82f6;
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: .15em;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+        @keyframes typing { from { width: 0 } to { width: 100% } }
+        @keyframes blink-caret { from, to { border-color: transparent } 50% { border-color: #3b82f6; } }
+    </style>
+</head>
+<body class="p-6 md:p-16">
+
+    <main class="max-w-4xl mx-auto">
+        <div class="flex justify-between text-[10px] uppercase tracking-widest text-zinc-600 mb-12 border-b border-zinc-900 pb-4">
+            <span>Auth_Status: Verified</span>
+            <span>Security_Clearance: Level_0</span>
+            <span class="text-blue-500">Welcome_Agent_742</span>
+        </div>
+
+        <header class="mb-16">
+            <h1 class="text-white text-4xl font-black uppercase tracking-tighter mb-4 typewriter">
+                Operation: Digital Sentry
+            </h1>
+            <p class="text-lg text-zinc-500">You are now a part of the AEAH network. Your role is to observe, document, and protect. Here is your initial protocol.</p>
+        </header>
+
+        <section class="space-y-8">
+            <div class="briefing-card p-8">
+                <h3 class="text-white font-bold uppercase mb-2">01. Secure Your Own Node</h3>
+                <p class="text-sm leading-relaxed">Before helping others, you must be un-trackable. Download the <a href="toolkit.html" class="text-blue-500 underline">Standard Defense Kit</a> and apply the Layer-4 encryption patches to your primary devices.</p>
+            </div>
+
+            <div class="briefing-card p-8">
+                <h3 class="text-white font-bold uppercase mb-2">02. Access the Intel Stream</h3>
+                <p class="text-sm leading-relaxed">Visit the <a href="exposed.html" class="text-blue-500 underline">Exposed Feed</a> daily. Your regional dashboard will alert you to local tech-predation patterns. If you see something new, use the Portal to report it.</p>
+            </div>
+
+            <div class="briefing-card p-8">
+                <h3 class="text-white font-bold uppercase mb-2">03. Support Local Chapters</h3>
+                <p class="text-sm leading-relaxed">Check the <a href="map.html" class="text-blue-500 underline">Global Heatmap</a> for other Guard members in Philadelphia. Collaboration is our greatest defense against algorithmic isolation.</p>
+            </div>
+        </section>
+
+        <div class="mt-20 p-12 bg-blue-600 text-black text-center rounded-sm">
+            <h2 class="text-2xl font-black uppercase mb-4">Acknowledge Terms</h2>
+            <p class="font-bold mb-8">"I swear to use technology as a tool for human advancement, and never as a weapon for exploitation."</p>
+            <button class="bg-black text-white px-12 py-4 font-black uppercase tracking-widest text-xs hover:bg-zinc-900 transition">
+                I Accept the Mission
+            </button>
+        </div>
+    </header>
+
+    <footer class="mt-20 py-8 text-center text-[9px] text-zinc-800 uppercase tracking-[0.5em]">
+        Integrity // Vigilance // Humanity // AEAH.ORG
+    </footer>
+
+</body>
+</html>
