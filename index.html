@@ -3,85 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AEAH | Safeguarding the Human Experience</title>
+    <title>AEAH | Base Command</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { background-color: #0a0a0a; color: #e5e5e5; }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;900&family=Space+Mono:wght@400;700&display=swap');
+        
+        body { background-color: #020202; color: #a1a1aa; font-family: 'Inter', sans-serif; }
+        .mono { font-family: 'Space Mono', monospace; }
+        
         .hero-gradient {
-            background: radial-gradient(circle at center, #1a1a1a 0%, #0a0a0a 100%);
+            background: radial-gradient(circle at 50% 50%, #1e293b 0%, #020202 100%);
         }
-        .accent-border { border-bottom: 2px solid #3b82f6; }
+        
+        .nav-card {
+            background: #09090b;
+            border: 1px solid #18181b;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .nav-card:hover {
+            border-color: #3b82f6;
+            background: #0c0c0e;
+            transform: translateY(-2px);
+        }
+
+        .status-glow {
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+        }
+
+        .ticker-wrap {
+            overflow: hidden;
+            white-space: nowrap;
+            background: #10b98110;
+            border-top: 1px solid #10b98130;
+            border-bottom: 1px solid #10b98130;
+        }
+
+        .ticker-move {
+            display: inline-block;
+            animation: ticker 30s linear infinite;
+        }
+
+        @keyframes ticker {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
     </style>
 </head>
-<body class="font-sans">
+<body>
 
-    <nav class="flex justify-between items-center px-8 py-6 bg-black border-b border-gray-800 sticky top-0 z-50">
-        <div class="text-2xl font-bold tracking-tighter text-white">
-            AEAH<span class="text-blue-500">.ORG</span>
+    <div class="ticker-wrap py-2 mono text-[9px] text-emerald-500 font-bold uppercase tracking-widest">
+        <div class="ticker-move">
+            SYSTEM_STATUS: ALL_NODES_OPERATIONAL // ACTIVE_ALERTS: 12 // LATEST_LEAK: PROJECT_SILICON_SHADOW // GUARD_STRENGTH: 842,911 // ENCRYPTION: AES-256_ACTIVE
         </div>
-        <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-medium">
-            <a href="#" class="hover:text-blue-500 transition">The Mission</a>
-            <a href="#" class="hover:text-blue-500 transition">Tech Safety</a>
-            <a href="#" class="hover:text-blue-500 transition">Resources</a>
-            <a href="#" class="border border-blue-500 px-4 py-1 text-blue-500 hover:bg-blue-500 hover:text-white transition">Take Action</a>
-        </div>
-    </nav>
+    </div>
 
-    <header class="hero-gradient h-screen flex flex-col justify-center items-center text-center px-4">
-        <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight text-white">
-            TECHNOLOGY SHOULD <br><span class="text-blue-600">NOT BE A WEAPON.</span>
-        </h1>
-        <p class="max-w-2xl text-lg md:text-xl text-gray-400 mb-10 leading-relaxed">
-            AEAH is dedicated to the ethical oversight of emerging technology. We stand as a barrier between innovation and harm, ensuring that progress never comes at the cost of human safety.
+    <header class="hero-gradient min-h-[60vh] flex flex-col items-center justify-center text-center px-6 border-b border-zinc-900">
+        <div class="mb-6 inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-500/30 bg-blue-500/10">
+            <span class="w-2 h-2 rounded-full bg-blue-500 status-glow animate-pulse"></span>
+            <span class="text-[10px] font-black text-blue-400 uppercase tracking-widest">Digital Sovereignty Online</span>
+        </div>
+        <h1 class="text-6xl md:text-9xl font-black text-white uppercase tracking-tighter mb-4">AEAH</h1>
+        <p class="max-w-xl text-lg text-zinc-400 font-light leading-relaxed mb-10">
+            The global defense network for human agency. We audit algorithms, protect whistleblowers, and codify digital rights.
         </p>
-        <div class="flex flex-col md:flex-row gap-4">
-            <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-sm transition duration-300">
-                REPORT AN ISSUE
-            </button>
-            <button class="bg-transparent border border-gray-600 hover:border-white text-white font-bold py-4 px-10 rounded-sm transition duration-300">
-                LEARN THE RISKS
-            </button>
+        <div class="flex flex-wrap justify-center gap-4">
+            <a href="portal.html" class="bg-white text-black px-10 py-4 text-[10px] font-black uppercase tracking-widest hover:bg-blue-600 hover:text-white transition">Submit Intel</a>
+            <a href="join.html" class="bg-zinc-900 text-white border border-zinc-800 px-10 py-4 text-[10px] font-black uppercase tracking-widest hover:bg-zinc-800 transition">Join the Guard</a>
         </div>
     </header>
 
-    <section class="py-24 px-8 bg-zinc-900">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
-            <div class="space-y-4">
-                <i class="fa-solid fa-shield-halved text-4xl text-blue-500"></i>
-                <h3 class="text-xl font-bold text-white uppercase tracking-wider">User Protection</h3>
-                <p class="text-gray-400 leading-relaxed">We identify and mitigate digital threats that target individuals, focusing on psychological and physical safety in a connected world.</p>
+    <main class="max-w-7xl mx-auto py-24 px-6">
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <div class="space-y-6">
+                <h3 class="text-xs font-black text-white uppercase tracking-[0.3em] mb-4 border-l-2 border-blue-600 pl-4">Intelligence</h3>
+                <a href="exposed.html" class="nav-card p-6 block rounded-lg">
+                    <h4 class="text-white font-bold text-sm mb-1 uppercase">Exposed Feed</h4>
+                    <p class="text-[10px] leading-relaxed">Real-time alerts on algorithmic threats and data harvesting.</p>
+                </a>
+                <a href="heatmap.html" class="nav-card p-6 block rounded-lg">
+                    <h4 class="text-white font-bold text-sm mb-1 uppercase">Global Heatmap</h4>
+                    <p class="text-[10px] leading-relaxed">Visualizing surveillance clusters across 190 countries.</p>
+                </a>
+                <a href="investigations.html" class="nav-card p-6 block rounded-lg">
+                    <h4 class="text-white font-bold text-sm mb-1 uppercase">Forensics</h4>
+                    <p class="text-[10px] leading-relaxed">Deep-dive technical reports on systemic tech abuse.</p>
+                </a>
             </div>
-            <div class="space-y-4">
-                <i class="fa-solid fa-microchip text-4xl text-blue-500"></i>
-                <h3 class="text-xl font-bold text-white uppercase tracking-wider">Ethical Engineering</h3>
-                <p class="text-gray-400 leading-relaxed">Advocating for "Safety by Design." We work with developers to ensure technology is built with human-first guardrails from day one.</p>
+
+            <div class="space-y-6">
+                <h3 class="text-xs font-black text-white uppercase tracking-[0.3em] mb-4 border-l-2 border-blue-600 pl-4">Defense</h3>
+                <a href="shield.html" class="nav-card p-6 block rounded-lg">
+                    <h4 class="text-white font-bold text-sm mb-1 uppercase">Browser Shield</h4>
+                    <p class="text-[10px] leading-relaxed">Anti-tracking browser extension for the modern web.</p>
+                </a>
+                <a href="app-hub.html" class="nav-card p-6 block rounded-lg">
+                    <h4 class="text-white font-bold text-sm mb-1 uppercase">Mobile Sentinel</h4>
+                    <p class="text-[10px] leading-relaxed">Hardware-level audit tools for iOS and Android.</p>
+                </a>
+                <a href="toolkit.html" class="nav-card p-6 block rounded-lg">
+                    <h4 class="text-white font-bold text-sm mb-1 uppercase">Defense Toolkit</h4>
+                    <p class="text-[10px] leading-relaxed">Step-by-step guides for physical and digital privacy.</p>
+                </a>
             </div>
-            <div class="space-y-4">
-                <i class="fa-solid fa-eye text-4xl text-blue-500"></i>
-                <h3 class="text-xl font-bold text-white uppercase tracking-wider">Public Vigilance</h3>
-                <p class="text-gray-400 leading-relaxed">Exposing the misuse of tech. When platforms or tools are used to exploit or harm, AEAH sounds the alarm.</p>
+
+            <div class="space-y-6">
+                <h3 class="text-xs font-black text-white uppercase tracking-[0.3em] mb-4 border-l-2 border-blue-600 pl-4">Community</h3>
+                <a href="hubs.html" class="nav-card p-6 block rounded-lg">
+                    <h4 class="text-white font-bold text-sm mb-1 uppercase">Regional Hubs</h4>
+                    <p class="text-[10px] leading-relaxed">Find local Guard nodes and physical meetups.</p>
+                </a>
+                <a href="academy.html" class="nav-card p-6 block rounded-lg">
+                    <h4 class="text-white font-bold text-sm mb-1 uppercase">AEAH Academy</h4>
+                    <p class="text-[10px] leading-relaxed">Master the ethics of design and data sovereignty.</p>
+                </a>
+                <a href="forum.html" class="nav-card p-6 block rounded-lg">
+                    <h4 class="text-white font-bold text-sm mb-1 uppercase">The War Room</h4>
+                    <p class="text-[10px] leading-relaxed">Secure communication and strategy for verified members.</p>
+                </a>
             </div>
+
+            <div class="space-y-6">
+                <h3 class="text-xs font-black text-white uppercase tracking-[0.3em] mb-4 border-l-2 border-blue-600 pl-4">Action</h3>
+                <a href="rights.html" class="nav-card p-6 block rounded-lg">
+                    <h4 class="text-white font-bold text-sm mb-1 uppercase">Legislative Tracker</h4>
+                    <p class="text-[10px] leading-relaxed">Monitoring global digital rights bills in real-time.</p>
+                </a>
+                <a href="newsroom.html" class="nav-card p-6 block rounded-lg">
+                    <h4 class="text-white font-bold text-sm mb-1 uppercase">The Daily Signal</h4>
+                    <p class="text-[10px] leading-relaxed">Uncompromising journalism from the front lines.</p>
+                </a>
+                <a href="gear.html" class="nav-card p-6 block rounded-lg">
+                    <h4 class="text-white font-bold text-sm mb-1 uppercase">Tactical Gear</h4>
+                    <p class="text-[10px] leading-relaxed">Analog tools for a digital war. Faraday, slides, and more.</p>
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <section class="bg-zinc-950 py-20 border-t border-zinc-900">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-2xl font-black text-white uppercase mb-4">Lost in the System?</h2>
+            <p class="text-xs text-zinc-600 uppercase tracking-widest mb-8">View our comprehensive architecture of all 35 operational nodes.</p>
+            <a href="sitemap.html" class="inline-block border border-zinc-800 px-8 py-4 text-[10px] font-black uppercase tracking-widest hover:bg-white hover:text-black transition">Explore Sitemap</a>
         </div>
     </section>
 
-    <section class="py-20 bg-black border-y border-zinc-800">
-        <div class="max-w-4xl mx-auto text-center px-6">
-            <h2 class="text-3xl font-bold mb-6 italic text-gray-200">"We don't want people hurting themselves... and we won't let tech be used to hurt others."</h2>
-            <div class="w-24 h-1 bg-blue-600 mx-auto mb-8"></div>
-            <p class="text-gray-500 uppercase tracking-[0.2em] text-sm">The AEAH Mandate</p>
-        </div>
-    </section>
-
-    <footer class="py-12 px-8 bg-black text-gray-600 text-sm">
-        <div class="max-w-6xl mx-auto flex flex-col md:row justify-between items-center border-t border-zinc-900 pt-8">
-            <p>&copy; 2026 AEAH.ORG | ADVOCATING FOR ETHICAL ARTIFICIAL & HUMAN INTERACTION</p>
-            <div class="flex space-x-6 mt-4 md:mt-0">
-                <a href="#" class="hover:text-white">Privacy Protocol</a>
-                <a href="#" class="hover:text-white">Terms of Engagement</a>
-                <a href="#" class="hover:text-white">Contact</a>
-            </div>
-        </div>
+    <footer class="py-12 text-center text-[10px] text-zinc-800 uppercase tracking-[0.8em]">
+        Protecting the biological core. // AEAH.ORG 2026
     </footer>
 
 </body>
