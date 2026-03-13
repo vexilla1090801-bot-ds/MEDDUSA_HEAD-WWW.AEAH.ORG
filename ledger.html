@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEAH | Resource Ledger</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { background-color: #0d0d0d; color: #888; }
+        .ledger-table tr { border-bottom: 1px solid #1a1a1a; transition: all 0.2s; }
+        .ledger-table tr:hover { background-color: #111; color: #fff; }
+        .category-tag {
+            font-size: 9px;
+            padding: 2px 6px;
+            border: 1px solid #333;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body class="font-mono text-xs p-6 md:p-12">
+
+    <header class="max-w-6xl mx-auto mb-16 border-b border-zinc-800 pb-10">
+        <div class="flex justify-between items-start">
+            <div>
+                <h1 class="text-4xl font-black text-white tracking-tighter uppercase mb-2">The Ledger.</h1>
+                <p class="max-w-xl text-zinc-500 uppercase tracking-widest leading-tight">
+                    Primary sources, technical white-papers, and legislative tracking. <br>
+                    Verification is the foundation of accountability.
+                </p>
+            </div>
+            <a href="index.html" class="border border-zinc-700 px-4 py-2 hover:bg-white hover:text-black transition">VOL_BACK_TO_BASE</a>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto">
+        
+        <div class="flex gap-4 mb-8 overflow-x-auto pb-4">
+            <button class="category-tag border-blue-600 text-blue-500">All_Entries</button>
+            <button class="category-tag">Algorithmic_Ethics</button>
+            <button class="category-tag">Data_Sovereignty</button>
+            <button class="category-tag">Legislative_Drafts</button>
+            <button class="category-tag">Bio-Metric_Security</button>
+        </div>
+
+        <div class="overflow-x-auto">
+            <table class="w-full text-left ledger-table">
+                <thead>
+                    <tr class="text-zinc-400 uppercase tracking-widest border-b-2 border-zinc-800">
+                        <th class="py-4 font-black">Ref_ID</th>
+                        <th class="py-4 font-black">Document_Title</th>
+                        <th class="py-4 font-black">Source_Entity</th>
+                        <th class="py-4 font-black">Status</th>
+                        <th class="py-4 font-black">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-6">#WP-0881</td>
+                        <td class="py-6 text-white font-bold">Neural-Net Bias in Predictive Sentencing</td>
+                        <td class="py-6 italic">Ethics in AI Institute</td>
+                        <td class="py-6"><span class="text-green-500">Verified</span></td>
+                        <td class="py-6"><a href="#" class="underline hover:text-blue-500">View_Source</a></td>
+                    </tr>
+                    <tr>
+                        <td class="py-6">#LEG-2026-04</td>
+                        <td class="py-6 text-white font-bold">The Digital Self-Defense Act (Draft)</td>
+                        <td class="py-6 italic">AEAH Legal Division</td>
+                        <td class="py-6 text-blue-400 font-bold">In_Review</td>
+                        <td class="py-6"><a href="#" class="underline hover:text-blue-500">Download_PDF</a></td>
+                    </tr>
+                    <tr>
+                        <td class="py-6">#AUD-1192</td>
+                        <td class="py-6 text-white font-bold">IoT Vulnerability Audit: Consumer Smart-Locks</td>
+                        <td class="py-6 italic">Cyber-Shield Labs</td>
+                        <td class="py-6"><span class="text-red-500">High_Alert</span></td>
+                        <td class="py-6"><a href="#" class="underline hover:text-blue-500">View_Source</a></td>
+                    </tr>
+                    <tr>
+                        <td class="py-6">#ST-0041</td>
+                        <td class="py-6 text-white font-bold">Cognitive Impact of Variable-Ratio Reward Loops</td>
+                        <td class="py-6 italic">Psychological Review Board</td>
+                        <td class="py-6"><span class="text-green-500">Verified</span></td>
+                        <td class="py-6"><a href="#" class="underline hover:text-blue-500">View_Source</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer class="max-w-6xl mx-auto mt-20 pt-8 border-t border-zinc-900 flex justify-between items-center text-[10px] uppercase tracking-widest text-zinc-700">
+        <div>Total Documents Indexed: 1,422</div>
+        <div>Last Updated: March 13, 2026 // 16:19:52</div>
+    </footer>
+
+</body>
+</html>
