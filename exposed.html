@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEAH | The Exposed Feed</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { background-color: #0a0a0a; color: #e5e5e5; }
+        .glitch-hover:hover {
+            text-shadow: 2px 0 #ff0000, -2px 0 #00ff00;
+        }
+        .status-active { color: #ef4444; border: 1px solid #ef4444; }
+        .status-resolved { color: #10b981; border: 1px solid #10b981; }
+        .card-bg { background: linear-gradient(145deg, #111, #050505); }
+    </style>
+</head>
+<body class="font-mono">
+
+    <nav class="flex justify-between items-center px-8 py-6 bg-black border-b border-red-900/30 sticky top-0 z-50">
+        <div class="text-2xl font-bold tracking-tighter text-white">
+            AEAH<span class="text-red-600">.EXPOSED</span>
+        </div>
+        <div class="space-x-6 text-xs uppercase tracking-widest font-medium">
+            <a href="index.html" class="hover:text-red-500 transition">Home</a>
+            <a href="portal.html" class="hover:text-red-500 transition">Submit Evidence</a>
+        </div>
+    </nav>
+
+    <header class="py-20 px-8 border-b border-zinc-800">
+        <div class="max-w-4xl">
+            <h1 class="text-5xl font-black text-white mb-6 uppercase tracking-tighter glitch-hover">The Transparency Log</h1>
+            <p class="text-xl text-gray-500 leading-relaxed border-l-4 border-red-600 pl-6">
+                Documentation of technological misuse, predatory software, and corporate negligence. We name the players and the price paid by the public. 
+                <span class="text-red-500 font-bold italic">Silence is complicity.</span>
+            </p>
+        </div>
+    </header>
+
+    <section class="py-16 px-8 max-w-6xl mx-auto">
+        <div class="flex justify-between items-end mb-12">
+            <h2 class="text-sm font-bold text-gray-600 uppercase tracking-[0.3em]">Current Alerts [2026_LOG]</h2>
+            <div class="text-xs text-gray-500 italic">Sorted by Severity: High to Critical</div>
+        </div>
+
+        <div class="grid gap-8">
+            
+            <div class="card-bg p-8 border border-zinc-800 flex flex-col md:row justify-between gap-6 hover:border-red-900/50 transition">
+                <div class="md:w-3/4">
+                    <div class="flex items-center gap-4 mb-3">
+                        <span class="px-2 py-0.5 text-[10px] font-bold uppercase status-active">Critical Threat</span>
+                        <span class="text-xs text-gray-600">MARCH 10, 2026</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-2">Social Echo Algorithm v4.2</h3>
+                    <p class="text-gray-400 mb-4">Confirmed deployment of "dark patterns" designed to trigger high-cortisol responses in minors. Resulting in documented physical self-harm spikes in three major cities.</p>
+                    <div class="flex gap-4 text-xs font-bold text-red-500 uppercase">
+                        <a href="#" class="hover:underline">View Evidence</a>
+                        <a href="#" class="hover:underline">Legal Filings</a>
+                    </div>
+                </div>
+                <div class="md:w-1/4 border-l border-zinc-800 md:pl-8 flex flex-col justify-center">
+                    <span class="text-xs text-gray-500 mb-1">Impact Level:</span>
+                    <span class="text-3xl font-black text-white">98.4%</span>
+                    <span class="text-[10px] text-red-600 font-bold uppercase mt-2 underline">Immediate Action Required</span>
+                </div>
+            </div>
+
+            <div class="card-bg p-8 border border-zinc-800 flex flex-col md:row justify-between gap-6 hover:border-blue-900/50 transition">
+                <div class="md:w-3/4">
+                    <div class="flex items-center gap-4 mb-3">
+                        <span class="px-2 py-0.5 text-[10px] font-bold uppercase text-blue-500 border border-blue-500">Privacy Breach</span>
+                        <span class="text-xs text-gray-600">FEB 28, 2026</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-2">NeuralLink Consumer Patch</h3>
+                    <p class="text-gray-400 mb-4">Unencrypted biometric data leaked via insecure API endpoint. Over 40,000 user "thought-maps" exposed on open-web marketplaces.</p>
+                    <div class="flex gap-4 text-xs font-bold text-blue-500 uppercase">
+                        <a href="#" class="hover:underline">Technical Audit</a>
+                        <a href="#" class="hover:underline">Redaction Status</a>
+                    </div>
+                </div>
+                <div class="md:w-1/4 border-l border-zinc-800 md:pl-8 flex flex-col justify-center">
+                    <span class="text-xs text-gray-500 mb-1">Impact Level:</span>
+                    <span class="text-3xl font-black text-white">72.1%</span>
+                    <span class="text-[10px] text-blue-600 font-bold uppercase mt-2">Monitoring Status</span>
+                </div>
+            </div>
+
+            <div class="card-bg p-8 border border-zinc-800 opacity-60">
+                <div class="flex items-center gap-4 mb-3">
+                    <span class="px-2 py-0.5 text-[10px] font-bold uppercase status-resolved">Resolved / Patched</span>
+                    <span class="text-xs text-gray-600">JAN 15, 2026</span>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-2 italic">FaceID Database Exploitation</h3>
+                <p class="text-gray-400 italic">This vulnerability was closed following AEAH litigation. Documentation remains public for transparency.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="py-20 bg-black text-center border-t border-zinc-900">
+        <p class="text-xs text-gray-700 uppercase tracking-widest">
+            The data above is verified by the AEAH Ethical Review Board. <br>
+            If your organization is listed and you have a fix: <a href="portal.html" class="text-red-900 hover:text-red-600 underline">Submit Remediation Evidence.</a>
+        </p>
+    </footer>
+
+</body>
+</html>
