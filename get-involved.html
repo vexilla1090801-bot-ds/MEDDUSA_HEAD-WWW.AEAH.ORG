@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEAH | Join the Guard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { background-color: #0a0a0a; color: #e5e5e5; }
+        .action-card:hover {
+            transform: translateY(-5px);
+            border-color: #3b82f6;
+            background: #111;
+        }
+        .text-glow { text-shadow: 0 0 10px rgba(59, 130, 246, 0.5); }
+    </style>
+</head>
+<body class="font-sans">
+
+    <nav class="flex justify-between items-center px-8 py-6 bg-black border-b border-gray-800 sticky top-0 z-50">
+        <a href="index.html" class="text-2xl font-bold tracking-tighter text-white">
+            AEAH<span class="text-blue-500">.GUARD</span>
+        </a>
+        <div class="space-x-8 text-xs uppercase tracking-widest font-medium">
+            <a href="index.html" class="hover:text-blue-500 transition">Home</a>
+            <a href="exposed.html" class="hover:text-blue-500 transition">The Feed</a>
+            <a href="portal.html" class="hover:text-blue-500 transition">Intel</a>
+        </div>
+    </nav>
+
+    <header class="py-24 px-8 text-center border-b border-zinc-900">
+        <h1 class="text-6xl font-black text-white mb-6 uppercase tracking-tighter">Choose Your <span class="text-blue-600">Post.</span></h1>
+        <p class="max-w-3xl mx-auto text-xl text-gray-400">
+            AEAH isn't just a website; it’s a network. We need your skills to ensure technology serves humanity, not the other way around.
+        </p>
+    </header>
+
+    <section class="max-w-7xl mx-auto px-8 py-20">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <div class="action-card p-10 border border-zinc-800 transition duration-300 flex flex-col h-full">
+                <i class="fa-solid fa-code text-4xl text-blue-500 mb-6"></i>
+                <h2 class="text-2xl font-bold text-white mb-4 uppercase">Code Audit</h2>
+                <p class="text-gray-500 mb-8 flex-grow">Join our technical team in deconstructing predatory algorithms and identifying "Safety by Design" flaws in new software releases.</p>
+                <button class="w-full py-3 border border-blue-500 text-blue-500 font-bold uppercase text-xs tracking-widest hover:bg-blue-500 hover:text-white transition">Apply for Clearance</button>
+            </div>
+
+            <div class="action-card p-10 border border-zinc-800 transition duration-300 flex flex-col h-full">
+                <i class="fa-solid fa-scale-balanced text-4xl text-blue-500 mb-6"></i>
+                <h2 class="text-2xl font-bold text-white mb-4 uppercase">Legal Advocacy</h2>
+                <p class="text-gray-500 mb-8 flex-grow">Help us draft policy and hold corporations accountable. We need legal minds to turn our "Exposed Feed" into courtroom action.</p>
+                <button class="w-full py-3 border border-blue-500 text-blue-500 font-bold uppercase text-xs tracking-widest hover:bg-blue-500 hover:text-white transition">Join the Council</button>
+            </div>
+
+            <div class="action-card p-10 border border-zinc-800 transition duration-300 flex flex-col h-full">
+                <i class="fa-solid fa-tower-observation text-4xl text-blue-500 mb-6"></i>
+                <h2 class="text-2xl font-bold text-white mb-4 uppercase">Community Watch</h2>
+                <p class="text-gray-500 mb-8 flex-grow">Help spread the word in your local community. Organize workshops on tech-safety and digital self-defense.</p>
+                <button class="w-full py-3 border border-blue-500 text-blue-500 font-bold uppercase text-xs tracking-widest hover:bg-blue-500 hover:text-white transition">Start a Chapter</button>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="bg-zinc-950 py-20 border-y border-zinc-900">
+        <div class="max-w-4xl mx-auto px-8 text-center">
+            <h2 class="text-3xl font-bold text-white mb-6 uppercase">Fuel the Mission</h2>
+            <p class="text-gray-400 mb-10">We do not accept corporate tech funding. Our independence is our strength. 100% of donations go toward independent audits and public awareness campaigns.</p>
+            <div class="flex justify-center gap-6">
+                <div class="bg-zinc-900 px-8 py-6 border border-zinc-800 rounded-lg cursor-pointer hover:border-blue-500 transition">
+                    <span class="block text-2xl font-black text-white">$25</span>
+                    <span class="text-xs text-gray-500 uppercase tracking-widest">Digital Sentry</span>
+                </div>
+                <div class="bg-zinc-900 px-8 py-6 border border-zinc-800 rounded-lg cursor-pointer hover:border-blue-500 transition">
+                    <span class="block text-2xl font-black text-white">$100</span>
+                    <span class="text-xs text-gray-500 uppercase tracking-widest">Protocol Lead</span>
+                </div>
+            </div>
+            <p class="mt-8 text-xs text-blue-500 font-bold uppercase cursor-pointer hover:underline">Or contribute via Secure Crypto Link</p>
+        </div>
+    </section>
+
+    <footer class="py-12 px-8 text-center text-gray-600 text-[10px] tracking-[0.4em] uppercase">
+        Vigilance is the price of progress. // AEAH.ORG 2026
+    </footer>
+
+</body>
+</html>
