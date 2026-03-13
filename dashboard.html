@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEAH | Mission Control</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { background-color: #050505; color: #64748b; }
+        .node {
+            border: 1px solid #1e293b;
+            background: #0a0a0a;
+            transition: all 0.3s;
+        }
+        .node:hover {
+            border-color: #3b82f6;
+            transform: scale(1.02);
+            color: #fff;
+        }
+        .connector {
+            height: 2px;
+            background: #1e293b;
+            flex-grow: 1;
+        }
+        .active-glow {
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.2);
+            border-color: #3b82f6;
+        }
+    </style>
+</head>
+<body class="font-sans p-6 md:p-12">
+
+    <header class="max-w-6xl mx-auto mb-16">
+        <h1 class="text-xs font-black text-blue-500 uppercase tracking-[0.5em] mb-4">Phase 14: Final Integration</h1>
+        <h2 class="text-4xl font-bold text-white tracking-tighter uppercase">The Human Defense Network</h2>
+    </header>
+
+    <main class="max-w-6xl mx-auto">
+        
+        <div class="space-y-12">
+            
+            <div class="flex flex-col md:flex-row items-center gap-4">
+                <div class="w-full md:w-1/4 node p-6 rounded-lg active-glow">
+                    <span class="text-[10px] text-blue-500 font-bold uppercase">Start Here</span>
+                    <h3 class="text-white font-bold text-lg mb-2">INDEX.HTML</h3>
+                    <p class="text-[10px] leading-tight">The Vision & Landing Base.</p>
+                </div>
+                <div class="connector hidden md:block"></div>
+                <div class="w-full md:w-1/4 node p-6 rounded-lg">
+                    <h3 class="text-white font-bold text-lg mb-2">MANIFESTO</h3>
+                    <p class="text-[10px] leading-tight">The Soul. Why we fight.</p>
+                </div>
+                <div class="connector hidden md:block"></div>
+                <div class="w-full md:w-1/4 node p-6 rounded-lg">
+                    <h3 class="text-white font-bold text-lg mb-2">TESTIMONIES</h3>
+                    <p class="text-[10px] leading-tight">The Human Cost. Real stories.</p>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center gap-4">
+                <div class="w-full md:w-1/4 node p-6 rounded-lg">
+                    <h3 class="text-white font-bold text-lg mb-2">EXPOSED</h3>
+                    <p class="text-[10px] leading-tight">The Threat Feed. Real-time alerts.</p>
+                </div>
+                <div class="connector hidden md:block"></div>
+                <div class="w-full md:w-1/4 node p-6 rounded-lg border-red-900/50">
+                    <h3 class="text-white font-bold text-lg mb-2">HEATMAP</h3>
+                    <p class="text-[10px] leading-tight">Global Tracking. Geographic truth.</p>
+                </div>
+                <div class="connector hidden md:block"></div>
+                <div class="w-full md:w-1/4 node p-6 rounded-lg">
+                    <h3 class="text-white font-bold text-lg mb-2">INVESTIGATIONS</h3>
+                    <p class="text-[10px] leading-tight">Forensic Evidence. The receipts.</p>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center gap-4">
+                <div class="w-full md:w-1/4 node p-6 rounded-lg bg-blue-900/10">
+                    <h3 class="text-white font-bold text-lg mb-2">PORTAL</h3>
+                    <p class="text-[10px] leading-tight">Submit Intel. Become a source.</p>
+                </div>
+                <div class="connector hidden md:block"></div>
+                <div class="w-full md:w-1/4 node p-6 rounded-lg">
+                    <h3 class="text-white font-bold text-lg mb-2">LEGAL</h3>
+                    <h4 class="text-[10px] leading-tight">The Defense Fund. Courtroom muscle.</h4>
+                </div>
+                <div class="connector hidden md:block"></div>
+                <div class="w-full md:w-1/4 node p-6 rounded-lg">
+                    <h3 class="text-white font-bold text-lg mb-2">JOIN THE GUARD</h3>
+                    <p class="text-[10px] leading-tight">The Army. Active recruitment.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mt-20 p-8 border border-zinc-800 rounded-xl bg-zinc-950/50 relative">
+            <h3 class="text-white font-bold mb-4 uppercase tracking-widest text-sm">System Status: Fully Integrated</h3>
+            <p class="text-xs text-zinc-500 leading-relaxed max-w-2xl">
+                AEAH.ORG is now a self-sustaining ecosystem. From the first moment a user lands on the **Index**, they are guided through a funnel of education (**Toolkit**), evidence (**Ledger**), and eventually, mobilization (**Secure ID**). 
+            </p>
+            <div class="mt-8 flex gap-4">
+                <button class="bg-white text-black text-[10px] font-black px-6 py-2 uppercase tracking-widest">Deploy All Nodes</button>
+                <button class="border border-zinc-700 text-zinc-500 text-[10px] font-black px-6 py-2 uppercase tracking-widest">Export Documentation</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="mt-20 py-12 text-center text-[10px] text-zinc-800 uppercase tracking-[0.5em]">
+        End of Line // AEAH Phase One Complete.
+    </footer>
+
+</body>
+</html>
