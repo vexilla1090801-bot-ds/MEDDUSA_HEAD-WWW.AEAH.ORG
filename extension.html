@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEAH | Digital Shield Extension</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { background-color: #020617; color: #94a3b8; }
+        .hud-border {
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(10px);
+        }
+        .pulse-blue {
+            box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7);
+            animation: pulse-blue 2s infinite;
+        }
+        @keyframes pulse-blue {
+            0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(59, 130, 246, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
+        }
+        .status-scan {
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+            background-size: 200% 100%;
+            animation: shimmer 3s infinite;
+        }
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+    </style>
+</head>
+<body class="font-mono overflow-x-hidden">
+
+    <nav class="flex justify-between items-center px-8 py-6 border-b border-blue-900/20">
+        <div class="text-xl font-black text-white italic">AEAH<span class="text-blue-500">.SHIELD</span></div>
+        <a href="index.html" class="text-[10px] uppercase tracking-widest text-zinc-500 hover:text-white">Return to Base</a>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-6 py-20">
+        
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+            
+            <div>
+                <h1 class="text-5xl font-black text-white mb-6 uppercase tracking-tighter leading-none">
+                    Armor Your <br><span class="text-blue-500">Navigation.</span>
+                </h1>
+                <p class="text-lg text-zinc-400 mb-8 leading-relaxed">
+                    The AEAH Shield is an open-source browser extension that acts as a real-time auditor for your digital safety. It doesn't just block ads; it deconstructs manipulation.
+                </p>
+                
+                <ul class="space-y-4 mb-10">
+                    <li class="flex items-center gap-3">
+                        <i class="fa-solid fa-eye-slash text-blue-500"></i>
+                        <span>Dark Pattern Detection & Neutralization</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fa-solid fa-microchip text-blue-500"></i>
+                        <span>Anti-Biometric Harvesting Protocol</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fa-solid fa-bolt text-blue-500"></i>
+                        <span>Real-time Algorithmic Bias Alerts</span>
+                    </li>
+                </ul>
+
+                <button class="pulse-blue bg-blue-600 text-white px-10 py-4 font-black uppercase tracking-widest text-xs hover:bg-blue-500 transition">
+                    Add to Browser [v1.04]
+                </button>
+            </div>
+
+            <div class="hud-border p-8 rounded-2xl relative">
+                <div class="status-scan absolute inset-0 pointer-events-none"></div>
+                <div class="flex justify-between items-center mb-8 border-b border-blue-900/30 pb-4">
+                    <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest">Active Session Analysis</span>
+                    <span class="text-[10px] text-green-500">SECURE</span>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="flex justify-between items-center">
+                        <span class="text-xs text-white uppercase">Site Reputation</span>
+                        <span class="text-xs text-yellow-500 uppercase font-bold">Caution: Predatory</span>
+                    </div>
+                    <div class="h-2 w-full bg-zinc-900 rounded-full overflow-hidden">
+                        <div class="h-full bg-yellow-500" style="width: 75%"></div>
+                    </div>
+
+                    <div class="p-4 bg-red-900/10 border border-red-900/30 rounded">
+                        <div class="text-[10px] text-red-500 font-bold mb-1 uppercase">Warning Detected:</div>
+                        <p class="text-[11px] text-red-200">This domain uses "Variable Reward" loops designed to prolong scrolling. AEAH has muted these elements.</p>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-zinc-950 p-4 border border-zinc-800 text-center">
+                            <span class="block text-2xl font-black text-white">42</span>
+                            <span class="text-[9px] uppercase">Shadow Tracks Blocked</span>
+                        </div>
+                        <div class="bg-zinc-950 p-4 border border-zinc-800 text-center">
+                            <span class="block text-2xl font-black text-white">0</span>
+                            <span class="text-[9px] uppercase">Biometric Leaks</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <section class="border-y border-blue-900/20 py-10 bg-zinc-950/50">
+        <div class="max-w-4xl mx-auto text-center px-6">
+            <h2 class="text-xs font-black text-blue-500 uppercase tracking-[0.4em] mb-4">Privacy by Design</h2>
+            <p class="text-xs text-zinc-500 uppercase leading-loose">
+                We do not collect your browsing history. <br>
+                All analysis is performed locally on your hardware. <br>
+                <span class="text-white underline cursor-pointer">View Audit Reports on the Ledger</span>
+            </p>
+        </div>
+    </section>
+
+    <footer class="py-12 text-center text-[9px] text-zinc-800 uppercase tracking-[0.6em]">
+        The Shield is the Guard // AEAH.ORG 2026
+    </footer>
+
+</body>
+</html>
