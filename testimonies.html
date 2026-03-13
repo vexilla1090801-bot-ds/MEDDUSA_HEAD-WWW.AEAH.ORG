@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEAH | The Human Cost</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { background-color: #0c0c0c; color: #d1d5db; }
+        .quote-card {
+            background: linear-gradient(to bottom right, #1a1a1a, #0c0c0c);
+            border: 1px solid #262626;
+        }
+        .voice-wave {
+            height: 20px;
+            width: 2px;
+            background: #3b82f6;
+            display: inline-block;
+            margin: 0 1px;
+            animation: bounce 1.2s infinite ease-in-out;
+        }
+        @keyframes bounce {
+            0%, 100% { height: 5px; }
+            50% { height: 20px; }
+        }
+    </style>
+</head>
+<body class="font-sans">
+
+    <nav class="flex justify-between items-center px-8 py-6 bg-black/50 backdrop-blur-md sticky top-0 z-50">
+        <a href="index.html" class="text-xl font-bold tracking-tighter text-white">AEAH<span class="text-blue-500">.VOICES</span></a>
+        <a href="portal.html" class="bg-blue-600 text-white px-4 py-2 text-[10px] font-bold uppercase tracking-widest hover:bg-blue-700 transition">Share Your Story</a>
+    </nav>
+
+    <header class="py-24 px-8 max-w-5xl mx-auto text-center">
+        <h1 class="text-5xl md:text-7xl font-black text-white mb-8 uppercase tracking-tighter">The Human <br><span class="text-blue-600 font-outline">Element.</span></h1>
+        <p class="text-xl text-gray-500 leading-relaxed italic">
+            "Behind every data point is a person. Behind every exploit is a family. We document the stories that algorithms try to erase."
+        </p>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-8 pb-32">
+        <div class="grid gap-12">
+
+            <div class="quote-card p-8 md:p-12 rounded-2xl relative">
+                <div class="absolute -top-4 left-10 bg-blue-600 px-4 py-1 text-[10px] font-black uppercase text-white">Verified Account</div>
+                <div class="flex flex-col md:row gap-10 items-start">
+                    <div class="w-24 h-24 bg-zinc-800 rounded-full flex-shrink-0 border-2 border-zinc-700 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Survivor Portrait" class="grayscale">
+                    </div>
+                    <div class="flex-grow">
+                        <div class="mb-4">
+                            <div class="voice-wave" style="animation-delay: 0.1s"></div>
+                            <div class="voice-wave" style="animation-delay: 0.3s"></div>
+                            <div class="voice-wave" style="animation-delay: 0.2s"></div>
+                            <div class="voice-wave" style="animation-delay: 0.4s"></div>
+                            <span class="ml-4 text-[10px] uppercase font-bold text-blue-500 tracking-widest">Audio Log: Case #411-B</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">"The algorithm decided I wasn't a fit for my own life."</h3>
+                        <p class="text-gray-400 text-lg leading-relaxed mb-6">
+                            "When the 'Sentinel' risk-assessment tool misidentified my medical records, I lost my insurance coverage overnight. No human would listen. I was screaming at a wall of code for six months while my health declined. AEAH didn't just give me a lawyer; they gave me my dignity back."
+                        </p>
+                        <span class="text-sm font-bold text-white">— Marcus R., Philadelphia</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quote-card p-8 md:p-12 rounded-2xl relative">
+                <div class="flex flex-col md:row-reverse gap-10 items-start">
+                    <div class="w-24 h-24 bg-zinc-800 rounded-full flex-shrink-0 border-2 border-zinc-700 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&q=80" alt="Survivor Portrait" class="grayscale">
+                    </div>
+                    <div class="flex-grow">
+                        <div class="mb-4">
+                            <span class="text-[10px] uppercase font-bold text-red-500 tracking-widest">Case Type: Deepfake Harassment</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">"They used my voice to rob my parents."</h3>
+                        <p class="text-gray-400 text-lg leading-relaxed mb-6">
+                            "Someone took a 15-second clip of my YouTube channel and used AI to clone my voice. They called my parents pretending I was in an accident. Technology made it possible for a stranger to weaponize my father's love against him. We need these guardrails now."
+                        </p>
+                        <span class="text-sm font-bold text-white">— Elena S., Madrid</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mt-20 text-center p-12 border border-zinc-800 bg-zinc-900/30 rounded-xl">
+            <h2 class="text-2xl font-bold text-white mb-4 uppercase">Have You Been Targeted?</h2>
+            <p class="text-gray-500 mb-8">Your story is the most powerful weapon we have against technological negligence. Share it securely and help others avoid the same trap.</p>
+            <a href="portal.html" class="inline-block border-2 border-white text-white px-8 py-3 font-bold uppercase tracking-widest hover:bg-white hover:text-black transition">Submit Your Testimony</a>
+        </div>
+    </main>
+
+    <footer class="py-12 px-8 text-center text-gray-700 text-[10px] uppercase tracking-widest">
+        You are not a data point. // AEAH.ORG 2026
+    </footer>
+
+</body>
+</html>
