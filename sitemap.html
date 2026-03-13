@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEAH | System Directory</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #050505; color: #71717a; font-family: 'Inter', sans-serif; }
+        .pillar-title {
+            border-bottom: 1px solid #27272a;
+            padding-bottom: 0.75rem;
+            margin-bottom: 1.5rem;
+            color: #f4f4f5;
+            font-size: 0.75rem;
+            font-weight: 900;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+        .nav-link {
+            display: block;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 0.5rem 0;
+            transition: all 0.2s ease;
+        }
+        .nav-link:hover {
+            color: #3b82f6;
+            padding-left: 0.5rem;
+        }
+        .matrix-container {
+            background-image: radial-gradient(#18181b 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+    </style>
+</head>
+<body class="matrix-container min-h-screen p-8 md:p-20">
+
+    <header class="max-w-7xl mx-auto mb-20 border-b border-zinc-800 pb-12">
+        <div class="flex flex-col md:flex-row justify-between items-baseline gap-4">
+            <h1 class="text-4xl font-black text-white tracking-tighter uppercase">System_Directory</h1>
+            <p class="text-[10px] uppercase tracking-[0.3em] font-bold text-zinc-500">
+                AEAH Infrastructure v1.0.4 // All Nodes Operational
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-12">
+        
+        <section>
+            <h2 class="pillar-title">01. Awareness</h2>
+            <nav>
+                <a href="index.html" class="nav-link">Main Base</a>
+                <a href="manifesto.html" class="nav-link">The Manifesto</a>
+                <a href="testimonies.html" class="nav-link">Human Cost</a>
+                <a href="press.html" class="nav-link">Media Room</a>
+                <a href="launch.html" class="nav-link">Signal (Launch)</a>
+                <a href="impact.html" class="nav-link">Impact Report</a>
+            </nav>
+        </section>
+
+        <section>
+            <h2 class="pillar-title">02. Intelligence</h2>
+            <nav>
+                <a href="exposed.html" class="nav-link">Exposed Feed</a>
+                <a href="investigations.html" class="nav-link">Forensics</a>
+                <a href="heatmap.html" class="nav-link">Global Map</a>
+                <a href="ledger.html" class="nav-link">The Ledger</a>
+                <a href="portal.html" class="nav-link">Intel Portal</a>
+                <a href="sanctuary.html" class="nav-link">The Sanctuary</a>
+            </nav>
+        </section>
+
+        <section>
+            <h2 class="pillar-title">03. Defense</h2>
+            <nav>
+                <a href="shield.html" class="nav-link">Browser Shield</a>
+                <a href="app-hub.html" class="nav-link">Mobile Sentinel</a>
+                <a href="toolkit.html" class="nav-link">Defense Kit</a>
+                <a href="checkup.html" class="nav-link">Privacy Audit</a>
+                <a href="gear.html" class="nav-link">Tactical Gear</a>
+            </nav>
+        </section>
+
+        <section>
+            <h2 class="pillar-title">04. Community</h2>
+            <nav>
+                <a href="join.html" class="nav-link">Recruitment</a>
+                <a href="hubs.html" class="nav-link">Regional Hubs</a>
+                <a href="academy.html" class="nav-link">Tactical Academy</a>
+                <a href="governance.html" class="nav-link">Voting Portal</a>
+                <a href="onboarding.html" class="nav-link">Agent Protocol</a>
+                <a href="login.html" class="nav-link">Secure ID</a>
+            </nav>
+        </section>
+
+        <section>
+            <h2 class="pillar-title">05. Authority</h2>
+            <nav>
+                <a href="legal.html" class="nav-link">Legal War Chest</a>
+                <a href="certification.html" class="nav-link">Ethics Seal</a>
+                <a href="transparency.html" class="nav-link">Audit & Canary</a>
+                <a href="dev.html" class="nav-link">Developer API</a>
+                <a href="command.html" class="nav-link">Command Center</a>
+            </nav>
+        </section>
+
+    </main>
+
+    <footer class="max-w-7xl mx-auto mt-32 border-t border-zinc-800 pt-12 text-center">
+        <div class="flex justify-center gap-12 mb-8">
+            <i class="fa-brands fa-github text-zinc-700 hover:text-white transition cursor-pointer"></i>
+            <i class="fa-brands fa-signal-messenger text-zinc-700 hover:text-white transition cursor-pointer"></i>
+            <i class="fa-brands fa-mastodon text-zinc-700 hover:text-white transition cursor-pointer"></i>
+        </div>
+        <p class="text-[9px] uppercase tracking-[0.8em] text-zinc-800">
+            Technology is a tool. Not a master. // AEAH.ORG 2026
+        </p>
+    </footer>
+
+</body>
+</html>
