@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEAH | Legal Defense Fund</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { background-color: #050505; color: #e2e8f0; }
+        .legal-gradient {
+            background: linear-gradient(180deg, #0a0a0a 0%, #111827 100%);
+        }
+        .progress-bar {
+            height: 4px;
+            background: #1f2937;
+            position: relative;
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            background: #3b82f6;
+            box-shadow: 0 0 10px #3b82f6;
+        }
+        .case-card {
+            border-left: 2px solid #3b82f6;
+            background: rgba(255, 255, 255, 0.02);
+        }
+    </style>
+</head>
+<body class="font-sans">
+
+    <nav class="flex justify-between items-center px-8 py-6 border-b border-zinc-800">
+        <a href="index.html" class="text-xl font-bold tracking-tighter text-white">AEAH<span class="text-blue-500">.LEGAL</span></a>
+        <div class="flex gap-6 text-[10px] uppercase font-black tracking-widest text-zinc-500">
+            <a href="index.html" class="hover:text-white transition">Base</a>
+            <a href="investigations.html" class="hover:text-white transition">Evidence</a>
+            <a href="get-involved.html" class="hover:text-white transition text-blue-500">Donate</a>
+        </div>
+    </nav>
+
+    <header class="legal-gradient py-24 px-8 text-center border-b border-zinc-800">
+        <h1 class="text-5xl md:text-6xl font-black text-white mb-6 uppercase tracking-tighter">Equality Before <br>The <span class="text-blue-600">Algorithm.</span></h1>
+        <p class="max-w-3xl mx-auto text-lg text-zinc-400">
+            Technology often moves faster than the law. We exist to close that gap. The AEAH Legal Defense Fund provides pro-bono representation for victims of tech abuse and files class-action suits against unethical developers.
+        </p>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-8 py-20">
+        
+        <div class="grid lg:grid-cols-3 gap-12">
+            
+            <div class="lg:col-span-1 space-y-8">
+                <div class="p-8 border border-zinc-800 rounded-sm bg-zinc-950">
+                    <h3 class="text-xs font-black text-blue-500 uppercase tracking-widest mb-4">The War Chest</h3>
+                    <div class="text-4xl font-black text-white mb-2">$1.2M</div>
+                    <p class="text-[10px] text-zinc-500 uppercase mb-6 tracking-tight font-bold">Total Raised for 2026 Litigation</p>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between text-[10px] uppercase font-bold mb-1">
+                                <span>Current Case Load</span>
+                                <span>85% Capacity</span>
+                            </div>
+                            <div class="progress-bar"><div class="progress-fill" style="width: 85%"></div></div>
+                        </div>
+                        <button class="w-full bg-blue-600 py-4 text-white font-black uppercase text-xs tracking-[0.2em] hover:bg-blue-500 transition mt-4">Contribute to the Fund</button>
+                    </div>
+                </div>
+
+                <div class="p-6 border border-zinc-800 italic text-sm text-zinc-500">
+                    "When software harms a human being, the developer is liable. We are here to ensure that liability is enforced."
+                </div>
+            </div>
+
+            <div class="lg:col-span-2 space-y-10">
+                <h2 class="text-xs font-black text-white uppercase tracking-[0.4em] mb-8 flex items-center gap-4">
+                    Active Litigation <span class="h-[1px] bg-zinc-800 flex-grow"></span>
+                </h2>
+
+                <div class="case-card p-8 transition hover:bg-zinc-900/40">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="text-[10px] font-bold text-blue-500 uppercase tracking-widest">Docket #2026-CV-088</span>
+                        <span class="px-2 py-0.5 border border-red-500 text-red-500 text-[9px] font-black uppercase">High Priority</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Citizens vs. DataStream Collective</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                        Class-action lawsuit regarding the unauthorized scraping of private facial biometric data for the purpose of training surveillance AI without consent.
+                    </p>
+                    <div class="flex items-center gap-6">
+                        <div class="text-[10px] font-bold uppercase text-zinc-500">Status: <span class="text-white underline">Discovery Phase</span></div>
+                        <div class="text-[10px] font-bold uppercase text-zinc-500">Counsel: <span class="text-white">AEAH Lead Council</span></div>
+                    </div>
+                </div>
+
+                <div class="case-card p-8 transition hover:bg-zinc-900/40">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="text-[10px] font-bold text-blue-500 uppercase tracking-widest">Docket #2025-CV-142</span>
+                        <span class="px-2 py-0.5 border border-zinc-600 text-zinc-500 text-[9px] font-black uppercase">Monitoring</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">The "Right to Disconnect" Appeal</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                        Advocating for workers' rights against predatory "Attention-Tracking" software that penalizes employees for looking away from their screens for more than 30 seconds.
+                    </p>
+                    <div class="flex items-center gap-6">
+                        <div class="text-[10px] font-bold uppercase text-zinc-500">Status: <span class="text-white underline">Appellate Review</span></div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="py-12 border-t border-zinc-900 text-center text-[10px] text-zinc-700 uppercase tracking-widest">
+        Defending the Human Protocol // AEAH.ORG Legal Division
+    </footer>
+
+</body>
+</html>
