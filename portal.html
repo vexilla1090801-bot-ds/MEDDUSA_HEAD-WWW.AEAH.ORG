@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEAH | Intel & Reporting Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { background-color: #0a0a0a; color: #e5e5e5; }
+        .input-dark {
+            background-color: #1a1a1a;
+            border: 1px solid #333;
+            color: white;
+        }
+        .input-dark:focus {
+            border-color: #3b82f6;
+            outline: none;
+        }
+        .glass-card {
+            background: rgba(20, 20, 20, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid #222;
+        }
+    </style>
+</head>
+<body class="font-sans">
+
+    <nav class="px-8 py-6 bg-black border-b border-gray-800 flex justify-between items-center">
+        <a href="index.html" class="text-2xl font-bold tracking-tighter text-white">
+            AEAH<span class="text-blue-500">.ORG</span>
+        </a>
+        <a href="index.html" class="text-xs uppercase tracking-widest text-gray-500 hover:text-white transition">← Return to Base</a>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-6 py-16">
+        <div class="grid lg:grid-cols-2 gap-16">
+            
+            <div class="space-y-8">
+                <div>
+                    <h1 class="text-4xl font-bold text-white mb-4 uppercase">Submit Intel</h1>
+                    <p class="text-gray-400">Have you witnessed technology being used to exploit, harass, or cause harm? Report it here. Submissions can be kept anonymous.</p>
+                </div>
+
+                <form class="space-y-6">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="flex flex-col">
+                            <label class="text-xs uppercase text-gray-500 mb-2">Identity (Optional)</label>
+                            <input type="text" placeholder="Name/Alias" class="input-dark p-3">
+                        </div>
+                        <div class="flex flex-col">
+                            <label class="text-xs uppercase text-gray-500 mb-2">Secure Email</label>
+                            <input type="email" placeholder="email@provider.com" class="input-dark p-3">
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col">
+                        <label class="text-xs uppercase text-gray-500 mb-2">Type of Misuse</label>
+                        <select class="input-dark p-3">
+                            <option>Algorithmic Bias/Harm</option>
+                            <option>Digital Harassment Tools</option>
+                            <option>AI Deception/Deepfakes</option>
+                            <option>Privacy Infiltration</option>
+                            <option>Other Ethical Violation</option>
+                        </select>
+                    </div>
+
+                    <div class="flex flex-col">
+                        <label class="text-xs uppercase text-gray-500 mb-2">Incident Brief</label>
+                        <textarea rows="5" placeholder="Provide details on the technology and the harm caused..." class="input-dark p-3"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 transition uppercase tracking-widest">
+                        Encrypt & Submit Report
+                    </button>
+                </form>
+            </div>
+
+            <div class="space-y-10">
+                <div class="glass-card p-8 border-l-4 border-blue-600">
+                    <h2 class="text-xl font-bold text-white mb-4">IMMEDIATE SAFETY PROTOCOLS</h2>
+                    <ul class="space-y-6">
+                        <li class="flex gap-4">
+                            <span class="text-blue-500 font-bold">01</span>
+                            <div>
+                                <h4 class="text-white font-semibold">Secure Your Perimeter</h4>
+                                <p class="text-sm text-gray-500">Enable 2FA on all devices. Use physical hardware keys where possible to prevent remote infiltration.</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="text-blue-500 font-bold">02</span>
+                            <div>
+                                <h4 class="text-white font-semibold">Document the Data</h4>
+                                <p class="text-sm text-gray-500">Take timestamps and screenshots of technological abuse. Digital evidence is fragile and easily deleted by perpetrators.</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="text-blue-500 font-bold">03</span>
+                            <div>
+                                <h4 class="text-white font-semibold">Isolate & Insulate</h4>
+                                <p class="text-sm text-gray-500">If a specific piece of software is causing harm, disconnect the device from the network immediately and seek AEAH verification.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="p-8 border border-zinc-800 bg-zinc-900/50">
+                    <h3 class="text-sm font-bold text-blue-500 uppercase tracking-widest mb-2">Our Commitment</h3>
+                    <p class="text-gray-400 italic">"We stand as the watchdog for those who cannot fight back against the machine. Your safety is the priority; the technology is secondary."</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="py-12 px-8 text-center text-gray-600 text-xs border-t border-zinc-900 mt-20">
+        AEAH SECURE PORTAL // END OF LINE
+    </footer>
+
+</body>
+</html>
