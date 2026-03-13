@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEAH | Global Threat Map</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { background-color: #050505; color: #94a3b8; overflow-x: hidden; }
+        .map-container {
+            background: url('https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 600px;
+            position: relative;
+            border: 1px solid #1e293b;
+        }
+        .ping {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background-color: #ef4444;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+            70% { transform: scale(2); box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+        }
+        .data-overlay {
+            background: rgba(10, 10, 10, 0.9);
+            backdrop-filter: blur(8px);
+            border: 1px solid #334155;
+        }
+    </style>
+</head>
+<body class="font-mono">
+
+    <nav class="flex justify-between items-center px-8 py-4 bg-black border-b border-zinc-800">
+        <div class="text-xl font-bold text-white tracking-widest">AEAH//LIVE_MAP</div>
+        <a href="index.html" class="text-[10px] text-zinc-500 hover:text-white uppercase tracking-widest transition">Close Feed</a>
+    </nav>
+
+    <main class="p-6">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="map-container mb-8 rounded-lg overflow-hidden group">
+                <div class="ping" style="top: 30%; left: 20%;" title="Data Breach: Sector 7"></div>
+                <div class="ping" style="top: 55%; left: 45%;" title="AI Bias Incident: Central"></div>
+                <div class="ping" style="top: 40%; left: 75%;" title="Surveillance Overreach: Region 4"></div>
+                
+                <div class="absolute bottom-6 left-6 data-overlay p-4 rounded text-[10px] space-y-2">
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
+                        <span class="text-white font-bold uppercase">Active Threat Node</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
+                        <span class="text-white font-bold uppercase">AEAH Field Chapter</span>
+                    </div>
+                    <div class="mt-4 border-t border-zinc-700 pt-2 text-zinc-500">
+                        REF_DATE: 13-MAR-2026 <br>
+                        SIGNAL_STRENGTH: NOMINAL
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                
+                <div class="md:col-span-2 data-overlay p-6 rounded-lg">
+                    <h3 class="text-sm font-bold text-white uppercase mb-4 border-b border-zinc-800 pb-2 flex justify-between">
+                        Real-Time Incident Stream
+                        <span class="text-blue-500 text-[10px]">AUTO_REFRESH: ON</span>
+                    </h3>
+                    <div class="space-y-4 h-64 overflow-y-auto pr-2 custom-scrollbar text-xs">
+                        <div class="flex justify-between border-b border-zinc-900 pb-2">
+                            <span class="text-red-500">[14:02]</span>
+                            <span class="text-white">Deepfake Fraud Campaign Detected</span>
+                            <span class="text-zinc-600">San Francisco, CA</span>
+                        </div>
+                        <div class="flex justify-between border-b border-zinc-900 pb-2">
+                            <span class="text-yellow-500">[13:45]</span>
+                            <span class="text-white">Predictive Algorithm Appeal Lodged</span>
+                            <span class="text-zinc-600">London, UK</span>
+                        </div>
+                        <div class="flex justify-between border-b border-zinc-900 pb-2">
+                            <span class="text-red-500">[12:12]</span>
+                            <span class="text-white">Mass Biometric Leak Confirmed</span>
+                            <span class="text-zinc-600">Mumbai, IN</span>
+                        </div>
+                        <div class="flex justify-between border-b border-zinc-900 pb-2">
+                            <span class="text-blue-500">[11:50]</span>
+                            <span class="text-white">AEAH Safety Patch Deployed</span>
+                            <span class="text-zinc-600">Global</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="data-overlay p-6 rounded-lg flex flex-col justify-center items-center text-center">
+                    <h3 class="text-xs font-bold text-zinc-500 uppercase mb-8 tracking-widest">Global Digital Risk</h3>
+                    <div class="relative w-40 h-40 border-4 border-red-900 rounded-full flex items-center justify-center mb-6">
+                        <div class="text-4xl font-black text-red-500">CRIT</div>
+                        <div class="absolute -bottom-2 bg-red-500 text-black text-[10px] px-2 font-bold">LEVEL 4</div>
+                    </div>
+                    <p class="text-[10px] leading-tight text-zinc-500 uppercase">
+                        Conditions indicate high-frequency algorithmic manipulation. <br> 
+                        <span class="text-white">Vigilance advised.</span>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="p-8 text-center">
+        <button onclick="window.print()" class="text-[10px] border border-zinc-700 px-4 py-2 hover:bg-white hover:text-black transition uppercase font-bold">
+            Export Intelligence Brief (PDF)
+        </button>
+    </footer>
+
+</body>
+</html>
