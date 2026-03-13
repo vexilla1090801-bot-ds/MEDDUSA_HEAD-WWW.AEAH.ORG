@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEAH | The Signal Begins</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #000; color: #fff; overflow: hidden; }
+        .glitch {
+            font-size: 5rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            position: relative;
+            text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+                         -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+                         0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+            animation: glitch 500ms infinite;
+        }
+        @keyframes glitch {
+            0% { text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75), -0.05em -0.025em 0 rgba(0, 255, 0, 0.75); }
+            15% { text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75), 0.025em 0.025em 0 rgba(0, 255, 0, 0.75); }
+            100% { text-shadow: -0.025em 0 0 rgba(255, 0, 0, 0.75), -0.025em -0.025em 0 rgba(0, 255, 0, 0.75); }
+        }
+        .timer-unit { border: 1px solid #333; padding: 1rem; min-width: 100px; }
+        .scan-overlay {
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
+                        linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
+            position: fixed; inset: 0; z-index: 50;
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-center h-screen font-mono p-4">
+
+    <div class="scan-overlay"></div>
+
+    <main class="text-center z-10">
+        <div class="text-blue-500 font-bold tracking-[1em] mb-4 uppercase text-xs">Transmitting Frequency 44.1kHz</div>
+        <h1 class="glitch mb-8">AEAH.ORG</h1>
+        
+        <p class="text-zinc-500 max-w-lg mx-auto mb-12 uppercase tracking-widest text-sm leading-loose">
+            The era of unchecked algorithmic governance ends in:
+        </p>
+
+        <div class="flex gap-4 justify-center mb-16">
+            <div class="timer-unit">
+                <span class="block text-4xl font-black">04</span>
+                <span class="text-[9px] text-zinc-600 uppercase">Days</span>
+            </div>
+            <div class="timer-unit">
+                <span class="block text-4xl font-black">12</span>
+                <span class="text-[9px] text-zinc-600 uppercase">Hours</span>
+            </div>
+            <div class="timer-unit">
+                <span class="block text-4xl font-black">38</span>
+                <span class="text-[9px] text-zinc-600 uppercase">Min</span>
+            </div>
+        </div>
+
+        <div class="max-w-md mx-auto">
+            <div class="flex flex-col md:flex-row gap-2">
+                <input type="email" placeholder="ENTER_EMAIL_FOR_THE_SIGNAL" class="flex-grow bg-transparent border border-zinc-700 p-4 text-xs focus:border-blue-500 outline-none text-white">
+                <button class="bg-white text-black px-8 py-4 text-xs font-black uppercase tracking-widest hover:bg-blue-600 hover:text-white transition">Join the Queue</button>
+            </div>
+            <p class="mt-6 text-[9px] text-zinc-700 uppercase tracking-widest">
+                By joining, you agree to the <span class="text-zinc-500 underline">Privacy Charter</span>. <br>
+                No tracking. No cookies. No compromises.
+            </p>
+        </div>
+    </main>
+
+    <footer class="fixed bottom-10 w-full text-center">
+        <div class="text-[10px] text-zinc-800 uppercase tracking-[0.8em]">Humanity. Authenticity. Freedom.</div>
+    </footer>
+
+</body>
+</html>
