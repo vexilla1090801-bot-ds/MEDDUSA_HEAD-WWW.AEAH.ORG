@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEAH | The Sanctuary</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #080808; color: #94a3b8; font-family: 'Inter', sans-serif; }
+        .sanctuary-card {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+        .security-step {
+            border-left: 2px solid #3b82f6;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .security-step::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 0;
+            width: 10px;
+            height: 10px;
+            background: #3b82f6;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body class="p-6 md:p-16">
+
+    <nav class="max-w-4xl mx-auto mb-16 flex justify-between items-center border-b border-zinc-800 pb-6">
+        <div class="text-xl font-bold tracking-tighter text-white uppercase">AEAH<span class="text-blue-500">.SANCTUARY</span></div>
+        <a href="index.html" class="text-[10px] uppercase font-black text-zinc-500 hover:text-white transition">Exit Securely</a>
+    </nav>
+
+    <main class="max-w-3xl mx-auto">
+        
+        <header class="mb-12">
+            <h1 class="text-3xl font-black text-white mb-4 uppercase tracking-tight">You are not alone in your conscience.</h1>
+            <p class="text-lg leading-relaxed text-zinc-400">
+                Coming forward is the hardest decision a professional can make. The Sanctuary is designed to protect your identity, your career, and your mental well-being while you help us fix the industry.
+            </p>
+        </header>
+
+        <div class="grid gap-8">
+            
+            <section class="sanctuary-card p-8 rounded-xl">
+                <h2 class="text-xs font-black text-blue-500 uppercase tracking-widest mb-6">Phase One: Pre-Disclosure Protocol</h2>
+                <div class="space-y-8">
+                    <div class="security-step">
+                        <h3 class="text-white font-bold text-sm uppercase mb-1">Air-Gapped Communication</h3>
+                        <p class="text-xs leading-relaxed">Do not use company hardware, Wi-Fi, or VPNs to contact us. Purchase a dedicated device with cash and only use public encrypted signals.</p>
+                    </div>
+                    <div class="security-step">
+                        <h3 class="text-white font-bold text-sm uppercase mb-1">Legal Review</h3>
+                        <p class="text-xs leading-relaxed">Our attorneys will review your NDA and employment contract for free. We will identify safe harbor protections under the Digital Rights Act of 2026.</p>
+                    </div>
+                    <div class="security-step">
+                        <h3 class="text-white font-bold text-sm uppercase mb-1">Data Minimization</h3>
+                        <p class="text-xs leading-relaxed">Only take what is necessary to prove the harm. We will guide you on how to document evidence without triggering internal surveillance traps.</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="p-6 border border-zinc-800 bg-zinc-950 rounded-lg">
+                    <h4 class="text-white font-bold text-xs uppercase mb-3">Psychological Support</h4>
+                    <p class="text-[11px] leading-relaxed">Direct access to therapists specializing in "Moral Injury" and corporate retaliation stress.</p>
+                </div>
+                <div class="p-6 border border-zinc-800 bg-zinc-950 rounded-lg">
+                    <h4 class="text-white font-bold text-xs uppercase mb-3">Relocation Assistance</h4>
+                    <p class="text-[11px] leading-relaxed">For high-risk disclosures, we provide logistical support for physical and digital relocation.</p>
+                </div>
+            </div>
+
+            <div class="mt-10 p-10 border-2 border-blue-600 bg-blue-600/5 rounded-xl text-center">
+                <h3 class="text-white font-black text-xl mb-4">READY TO TALK?</h3>
+                <p class="text-sm text-zinc-400 mb-8">This is a one-way encrypted channel to our Lead Advocate.</p>
+                <div class="font-mono text-xs bg-black p-4 rounded border border-zinc-800 text-blue-400 break-all mb-8">
+                    SIGNAL_ID: AEAH_SANCTUARY_V2_ENCRYPTED_99182
+                </div>
+                <button class="bg-blue-600 text-white px-10 py-4 font-black uppercase tracking-widest text-xs hover:bg-blue-500 transition">
+                    Initiate Secure Contact
+                </button>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="mt-20 py-12 text-center text-[10px] text-zinc-800 uppercase tracking-[0.6em]">
+        Your conscience is your shield. // AEAH.ORG 2026
+    </footer>
+
+</body>
+</html>
