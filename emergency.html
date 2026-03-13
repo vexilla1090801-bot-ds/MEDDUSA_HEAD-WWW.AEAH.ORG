@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEAH | EMERGENCY_PROTOCOL</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #7f1d1d; color: #fff; font-family: 'Space Mono', monospace; }
+        .blink { animation: blinker 1s linear infinite; }
+        @keyframes blinker { 50% { opacity: 0; } }
+        .terminal-box { background: #000; border: 2px solid #fff; }
+        ::selection { background: #fff; color: #7f1d1d; }
+    </style>
+</head>
+<body class="p-4 md:p-12 flex items-center justify-center min-h-screen">
+
+    <main class="max-w-3xl w-full terminal-box p-8 md:p-12 shadow-[20px_20px_0px_0px_rgba(0,0,0,1)]">
+        
+        <header class="border-b-2 border-white pb-6 mb-8">
+            <div class="flex justify-between items-center mb-4">
+                <h1 class="text-2xl font-black uppercase tracking-tighter">Status: RED_ALERT</h1>
+                <span class="blink bg-white text-red-900 px-2 py-1 text-xs font-black">CRITICAL</span>
+            </div>
+            <p class="text-[10px] leading-relaxed uppercase">
+                System Time: 2026-03-13_16:50:24 // Primary Servers: UNREACHABLE // Local Node: ACTIVE
+            </p>
+        </header>
+
+        <section class="space-y-8">
+            <div>
+                <h2 class="text-lg font-black uppercase mb-2">01. Current Directive</h2>
+                <p class="text-sm leading-relaxed">
+                    The AEAH primary domain is currently under a distributed denial-of-service attack or legal seizure. DO NOT attempt to log in to the main dashboard. All Secure IDs have been locally encrypted and purged from the central cloud.
+                </p>
+            </div>
+
+            <div class="bg-white/10 p-4 border border-white/20">
+                <h2 class="text-lg font-black uppercase mb-2">02. Communication Channels</h2>
+                <ul class="text-xs space-y-2">
+                    <li>> MESH_NET: Frequency 144.800 MHz (Region 1)</li>
+                    <li>> ONION_ADDRESS: aeah77v2...[REDACTED].onion</li>
+                    <li>> PHYSICAL_HUB: Report to your nearest <a href="hubs.html" class="underline">Regional Node</a> immediately.</li>
+                </ul>
+            </div>
+
+            <div>
+                <h2 class="text-lg font-black uppercase mb-2">03. Data Protection</h2>
+                <p class="text-xs leading-relaxed italic">
+                    Initiate "Ghost Protocol" on all Guard-issued devices. Use the <a href="gear.html" class="underline">Sentry Faraday Pouch</a>. Destroy physical logs if compromise is imminent.
+                </p>
+            </div>
+        </section>
+
+        <footer class="mt-12 pt-6 border-t border-white/20 text-center">
+            <p class="text-[10px] uppercase font-bold tracking-widest">
+                Truth persists even in the dark. // AEAH.ORG_FAILSAFE
+            </p>
+        </footer>
+
+    </main>
+
+</body>
+</html>
