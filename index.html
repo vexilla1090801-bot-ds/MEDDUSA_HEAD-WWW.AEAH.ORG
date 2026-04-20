@@ -1,321 +1,276 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>AEAH | Base Command</title>
-
     <script src="https://cdn.tailwindcss.com"></script>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
     <style>
-
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;900&family=Space+Mono:wght@400;700&display=swap');
-
         
-
-        body { background-color: #020202; color: #a1a1aa; font-family: 'Inter', sans-serif; }
-
+        body { background-color: #020202; color: #a1a1aa; font-family: 'Inter', sans-serif; overflow-x: hidden; }
         .mono { font-family: 'Space Mono', monospace; }
-
         
-
         .hero-gradient {
-
             background: radial-gradient(circle at 50% 50%, #1e293b 0%, #020202 100%);
-
         }
-
         
-
         .nav-card {
-
             background: #09090b;
-
             border: 1px solid #18181b;
-
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-
         }
-
         
-
         .nav-card:hover {
-
             border-color: #3b82f6;
-
             background: #0c0c0e;
-
             transform: translateY(-2px);
-
         }
-
-
 
         .status-glow {
-
             box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
-
         }
-
-
 
         .ticker-wrap {
-
             overflow: hidden;
-
             white-space: nowrap;
-
             background: #10b98110;
-
             border-top: 1px solid #10b98130;
-
             border-bottom: 1px solid #10b98130;
-
         }
-
-
 
         .ticker-move {
-
             display: inline-block;
-
             animation: ticker 30s linear infinite;
-
         }
-
-
 
         @keyframes ticker {
-
             0% { transform: translateX(100%); }
-
             100% { transform: translateX(-100%); }
-
         }
 
+        /* Modal Styles */
+        #regModal, #loginModal {
+            scrollbar-width: thin;
+            scrollbar-color: #3b82f6 #020202;
+        }
     </style>
-
 </head>
-
 <body>
 
+    <nav class="sticky top-0 z-50 bg-black/95 border-b border-blue-900/30 backdrop-blur-md px-6 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-black tracking-tighter text-white">
+                AEAH<span class="text-blue-500">.ORG</span>
+            </a>
 
+            <div class="hidden lg:flex gap-8 items-center text-[11px] font-black uppercase tracking-widest text-zinc-400">
+                <a href="exposed.html" class="hover:text-blue-400 transition">Exposed Feed</a>
+                <a href="legal.html" class="hover:text-blue-400 transition">Legal Defense</a>
+                <a href="forum.html" class="hover:text-blue-400 transition">The War Room</a>
+                <a href="hubs.html" class="hover:text-blue-400 transition">Regional Hubs</a>
+                <a href="sitemap.html" class="hover:text-blue-400 transition">Sitemap</a>
+            </div>
+
+            <div class="flex gap-4 items-center">
+                <button onclick="toggleLogin()" class="text-[11px] font-black uppercase tracking-widest text-zinc-400 hover:text-white transition">Sign In</button>
+                <button onclick="toggleRegistration()" class="bg-blue-600 hover:bg-blue-500 text-white px-6 py-2 text-[11px] font-black uppercase tracking-widest transition rounded-sm shadow-[0_0_15px_rgba(59,130,246,0.4)]">
+                    Join The Guard
+                </button>
+            </div>
+        </div>
+    </nav>
 
     <div class="ticker-wrap py-2 mono text-[9px] text-emerald-500 font-bold uppercase tracking-widest">
-
         <div class="ticker-move">
-
             SYSTEM_STATUS: ALL_NODES_OPERATIONAL // ACTIVE_ALERTS: 12 // LATEST_LEAK: PROJECT_SILICON_SHADOW // GUARD_STRENGTH: 842,911 // ENCRYPTION: AES-256_ACTIVE
-
         </div>
-
     </div>
 
-
-
     <header class="hero-gradient min-h-[60vh] flex flex-col items-center justify-center text-center px-6 border-b border-zinc-900">
-
         <div class="mb-6 inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-500/30 bg-blue-500/10">
-
             <span class="w-2 h-2 rounded-full bg-blue-500 status-glow animate-pulse"></span>
-
             <span class="text-[10px] font-black text-blue-400 uppercase tracking-widest">Digital Sovereignty Online</span>
-
         </div>
-
         <h1 class="text-6xl md:text-9xl font-black text-white uppercase tracking-tighter mb-4">AEAH</h1>
-
         <p class="max-w-xl text-lg text-zinc-400 font-light leading-relaxed mb-10">
-
             The global defense network for human agency. We audit algorithms, protect whistleblowers, and codify digital rights.
-
         </p>
-
         <div class="flex flex-wrap justify-center gap-4">
-
             <a href="portal.html" class="bg-white text-black px-10 py-4 text-[10px] font-black uppercase tracking-widest hover:bg-blue-600 hover:text-white transition">Submit Intel</a>
-
-            <a href="join.html" class="bg-zinc-900 text-white border border-zinc-800 px-10 py-4 text-[10px] font-black uppercase tracking-widest hover:bg-zinc-800 transition">Join the Guard</a>
-
+            <button onclick="toggleRegistration()" class="bg-zinc-900 text-white border border-zinc-800 px-10 py-4 text-[10px] font-black uppercase tracking-widest hover:bg-zinc-800 transition">Join the Guard</button>
         </div>
-
     </header>
 
-
-
     <main class="max-w-7xl mx-auto py-24 px-6">
-
-        
-
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-
-            
-
             <div class="space-y-6">
-
                 <h3 class="text-xs font-black text-white uppercase tracking-[0.3em] mb-4 border-l-2 border-blue-600 pl-4">Intelligence</h3>
-
                 <a href="exposed.html" class="nav-card p-6 block rounded-lg">
-
                     <h4 class="text-white font-bold text-sm mb-1 uppercase">Exposed Feed</h4>
-
                     <p class="text-[10px] leading-relaxed">Real-time alerts on algorithmic threats and data harvesting.</p>
-
                 </a>
-
                 <a href="heatmap.html" class="nav-card p-6 block rounded-lg">
-
                     <h4 class="text-white font-bold text-sm mb-1 uppercase">Global Heatmap</h4>
-
                     <p class="text-[10px] leading-relaxed">Visualizing surveillance clusters across 190 countries.</p>
-
                 </a>
-
                 <a href="investigations.html" class="nav-card p-6 block rounded-lg">
-
                     <h4 class="text-white font-bold text-sm mb-1 uppercase">Forensics</h4>
-
                     <p class="text-[10px] leading-relaxed">Deep-dive technical reports on systemic tech abuse.</p>
-
                 </a>
-
             </div>
 
-
-
             <div class="space-y-6">
-
                 <h3 class="text-xs font-black text-white uppercase tracking-[0.3em] mb-4 border-l-2 border-blue-600 pl-4">Defense</h3>
-
                 <a href="shield.html" class="nav-card p-6 block rounded-lg">
-
                     <h4 class="text-white font-bold text-sm mb-1 uppercase">Browser Shield</h4>
-
                     <p class="text-[10px] leading-relaxed">Anti-tracking browser extension for the modern web.</p>
-
                 </a>
-
                 <a href="app-hub.html" class="nav-card p-6 block rounded-lg">
-
                     <h4 class="text-white font-bold text-sm mb-1 uppercase">Mobile Sentinel</h4>
-
                     <p class="text-[10px] leading-relaxed">Hardware-level audit tools for iOS and Android.</p>
-
                 </a>
-
                 <a href="toolkit.html" class="nav-card p-6 block rounded-lg">
-
                     <h4 class="text-white font-bold text-sm mb-1 uppercase">Defense Toolkit</h4>
-
                     <p class="text-[10px] leading-relaxed">Step-by-step guides for physical and digital privacy.</p>
-
                 </a>
-
             </div>
 
-
-
             <div class="space-y-6">
-
                 <h3 class="text-xs font-black text-white uppercase tracking-[0.3em] mb-4 border-l-2 border-blue-600 pl-4">Community</h3>
-
                 <a href="hubs.html" class="nav-card p-6 block rounded-lg">
-
                     <h4 class="text-white font-bold text-sm mb-1 uppercase">Regional Hubs</h4>
-
                     <p class="text-[10px] leading-relaxed">Find local Guard nodes and physical meetups.</p>
-
                 </a>
-
                 <a href="academy.html" class="nav-card p-6 block rounded-lg">
-
                     <h4 class="text-white font-bold text-sm mb-1 uppercase">AEAH Academy</h4>
-
                     <p class="text-[10px] leading-relaxed">Master the ethics of design and data sovereignty.</p>
-
                 </a>
-
                 <a href="forum.html" class="nav-card p-6 block rounded-lg">
-
                     <h4 class="text-white font-bold text-sm mb-1 uppercase">The War Room</h4>
-
                     <p class="text-[10px] leading-relaxed">Secure communication and strategy for verified members.</p>
-
                 </a>
-
             </div>
-
-
 
             <div class="space-y-6">
-
                 <h3 class="text-xs font-black text-white uppercase tracking-[0.3em] mb-4 border-l-2 border-blue-600 pl-4">Action</h3>
-
                 <a href="rights.html" class="nav-card p-6 block rounded-lg">
-
                     <h4 class="text-white font-bold text-sm mb-1 uppercase">Legislative Tracker</h4>
-
                     <p class="text-[10px] leading-relaxed">Monitoring global digital rights bills in real-time.</p>
-
                 </a>
-
                 <a href="newsroom.html" class="nav-card p-6 block rounded-lg">
-
                     <h4 class="text-white font-bold text-sm mb-1 uppercase">The Daily Signal</h4>
-
                     <p class="text-[10px] leading-relaxed">Uncompromising journalism from the front lines.</p>
-
                 </a>
-
                 <a href="gear.html" class="nav-card p-6 block rounded-lg">
-
                     <h4 class="text-white font-bold text-sm mb-1 uppercase">Tactical Gear</h4>
-
                     <p class="text-[10px] leading-relaxed">Analog tools for a digital war. Faraday, slides, and more.</p>
-
                 </a>
-
             </div>
-
-
-
         </div>
-
     </main>
 
-
-
     <section class="bg-zinc-950 py-20 border-t border-zinc-900">
-
         <div class="max-w-7xl mx-auto px-6 text-center">
-
             <h2 class="text-2xl font-black text-white uppercase mb-4">Lost in the System?</h2>
-
             <p class="text-xs text-zinc-600 uppercase tracking-widest mb-8">View our comprehensive architecture of all 35 operational nodes.</p>
-
             <a href="sitemap.html" class="inline-block border border-zinc-800 px-8 py-4 text-[10px] font-black uppercase tracking-widest hover:bg-white hover:text-black transition">Explore Sitemap</a>
-
         </div>
-
     </section>
 
-
-
     <footer class="py-12 text-center text-[10px] text-zinc-800 uppercase tracking-[0.8em]">
-
         Protecting the biological core. // AEAH.ORG 2026
-
     </footer>
 
+    <div id="regModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-black/95 backdrop-blur-xl overflow-y-auto">
+        <div class="bg-zinc-950 border border-zinc-800 w-full max-w-2xl p-8 relative my-8">
+            <button onclick="toggleRegistration()" class="absolute top-6 right-6 text-zinc-500 hover:text-white text-2xl transition">&times;</button>
+            
+            <header class="mb-8 border-b border-zinc-800 pb-4">
+                <h2 class="text-3xl font-black text-white uppercase tracking-tighter">Personnel Enrollment</h2>
+                <p class="text-xs text-blue-500 font-bold uppercase tracking-widest mt-2">Mission Founded by a Survivor of Nearly 20 Years</p>
+            </header>
 
+            <div class="bg-blue-900/10 border-l-4 border-blue-500 p-5 mb-8">
+                <p class="text-[11px] text-zinc-300 leading-relaxed uppercase font-semibold">
+                    <i class="fa-solid fa-user-shield mr-2 text-blue-500"></i>
+                    <strong>Privacy Commitment:</strong> You are providing your information to a non-profit organization. All data is kept strictly private. None of it is sold or used for any purpose other than bringing down the gang-stalking systems bothering so many Americans. Your information is absolutely safe.
+                </p>
+            </div>
 
+            <form class="grid md:grid-cols-2 gap-6">
+                <div>
+                    <label class="text-[10px] font-black uppercase text-zinc-500 block mb-2">First Name</label>
+                    <input type="text" class="w-full bg-zinc-900 border border-zinc-800 p-3 text-white text-sm outline-none focus:border-blue-500" required>
+                </div>
+                <div>
+                    <label class="text-[10px] font-black uppercase text-zinc-500 block mb-2">Last Name</label>
+                    <input type="text" class="w-full bg-zinc-900 border border-zinc-800 p-3 text-white text-sm outline-none focus:border-blue-500" required>
+                </div>
+                <div>
+                    <label class="text-[10px] font-black uppercase text-zinc-500 block mb-2">Email Address</label>
+                    <input type="email" class="w-full bg-zinc-900 border border-zinc-800 p-3 text-white text-sm outline-none focus:border-blue-500" required>
+                </div>
+                <div>
+                    <label class="text-[10px] font-black uppercase text-zinc-500 block mb-2">Phone Number</label>
+                    <input type="tel" class="w-full bg-zinc-900 border border-zinc-800 p-3 text-white text-sm outline-none focus:border-blue-500" required>
+                </div>
+
+                <div class="md:col-span-2">
+                    <div class="bg-zinc-900 border border-blue-500/30 p-5 mb-4">
+                        <div class="flex gap-4">
+                            <div class="text-blue-500 pt-1">
+                                <i class="fa-solid fa-circle-exclamation text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-[10px] uppercase tracking-widest mb-2">Strategic Requirement: Physical Address</h4>
+                                <p class="text-[11px] text-zinc-400 leading-relaxed uppercase font-bold">
+                                    The address is required to <span class="text-white font-black underline">Geo-Locate where all incidents are happening.</span> Mapping these hotspots is essential for documentation and documenting the instances of system abuse for the mission.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <label class="text-[10px] font-black uppercase text-zinc-500 block mb-2">Physical Address</label>
+                    <input type="text" class="w-full bg-zinc-900 border border-zinc-800 p-4 text-white text-sm outline-none focus:border-blue-500" required>
+                </div>
+
+                <button type="submit" class="md:col-span-2 bg-white text-black py-5 font-black uppercase tracking-widest text-xs hover:bg-blue-600 hover:text-white transition-all shadow-lg">
+                    Complete Enrollment
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div id="loginModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-black/95 backdrop-blur-xl">
+        <div class="bg-zinc-950 border border-zinc-800 w-full max-w-sm p-8 relative shadow-2xl">
+            <button onclick="toggleLogin()" class="absolute top-6 right-6 text-zinc-500 hover:text-white text-2xl transition">&times;</button>
+            <h2 class="text-2xl font-black text-white uppercase tracking-tighter mb-8 border-b border-zinc-800 pb-4 text-center">Secure Sign In</h2>
+            <form class="space-y-6">
+                <div>
+                    <label class="text-[10px] font-black uppercase text-zinc-500 block mb-2">Email</label>
+                    <input type="email" class="w-full bg-zinc-900 border border-zinc-800 p-3 text-white text-sm outline-none focus:border-blue-500" required>
+                </div>
+                <div>
+                    <label class="text-[10px] font-black uppercase text-zinc-500 block mb-2">Password</label>
+                    <input type="password" class="w-full bg-zinc-900 border border-zinc-800 p-3 text-white text-sm outline-none focus:border-blue-500" required>
+                </div>
+                <button type="submit" class="w-full bg-blue-600 text-white py-4 font-black uppercase tracking-widest text-[11px] hover:bg-blue-500 transition-all shadow-[0_0_15px_rgba(59,130,246,0.3)]">Authenticate</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function toggleRegistration() {
+            const modal = document.getElementById('regModal');
+            modal.classList.toggle('hidden');
+            modal.classList.toggle('flex');
+        }
+        function toggleLogin() {
+            const modal = document.getElementById('loginModal');
+            modal.classList.toggle('hidden');
+            modal.classList.toggle('flex');
+        }
+    </script>
 </body>
-
 </html>
