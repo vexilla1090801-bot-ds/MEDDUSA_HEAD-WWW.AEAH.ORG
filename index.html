@@ -9,7 +9,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;900&family=Space+Mono:wght@400;700&display=swap');
         
-        body { background-color: #020202; color: #a1a1aa; font-family: 'Inter', sans-serif; }
+        body { background-color: #020202; color: #a1a1aa; font-family: 'Inter', sans-serif; overflow-x: hidden; }
         .mono { font-family: 'Space Mono', monospace; }
         
         .hero-gradient {
@@ -49,9 +49,36 @@
             0% { transform: translateX(100%); }
             100% { transform: translateX(-100%); }
         }
+
+        /* Modal Scrollbar Fix */
+        #regModal::-webkit-scrollbar { width: 4px; }
+        #regModal::-webkit-scrollbar-thumb { background: #3b82f6; }
     </style>
 </head>
 <body>
+
+    <nav class="sticky top-0 z-50 bg-black/95 border-b border-blue-900/30 backdrop-blur-md px-6 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-black tracking-tighter text-white">
+                AEAH<span class="text-blue-500">.ORG</span>
+            </a>
+
+            <div class="hidden lg:flex gap-8 items-center text-[11px] font-black uppercase tracking-widest text-zinc-400">
+                <a href="exposed.html" class="hover:text-blue-400 transition">Exposed Feed</a>
+                <a href="legal.html" class="hover:text-blue-400 transition">Legal Defense</a>
+                <a href="forum.html" class="hover:text-blue-400 transition">The War Room</a>
+                <a href="hubs.html" class="hover:text-blue-400 transition">Regional Hubs</a>
+                <a href="rights.html" class="hover:text-blue-400 transition">Legislative</a>
+            </div>
+
+            <div class="flex gap-4 items-center">
+                <button onclick="toggleLogin()" class="text-[11px] font-black uppercase tracking-widest text-zinc-400 hover:text-white transition">Sign In</button>
+                <button onclick="toggleRegistration()" class="bg-blue-600 hover:bg-blue-500 text-white px-6 py-2 text-[11px] font-black uppercase tracking-widest transition rounded-sm shadow-[0_0_15px_rgba(59,130,246,0.4)]">
+                    Join The Guard
+                </button>
+            </div>
+        </div>
+    </nav>
 
     <div class="ticker-wrap py-2 mono text-[9px] text-emerald-500 font-bold uppercase tracking-widest">
         <div class="ticker-move">
@@ -70,78 +97,39 @@
         </p>
         <div class="flex flex-wrap justify-center gap-4">
             <a href="portal.html" class="bg-white text-black px-10 py-4 text-[10px] font-black uppercase tracking-widest hover:bg-blue-600 hover:text-white transition">Submit Intel</a>
-            <a href="join.html" class="bg-zinc-900 text-white border border-zinc-800 px-10 py-4 text-[10px] font-black uppercase tracking-widest hover:bg-zinc-800 transition">Join the Guard</a>
+            <button onclick="toggleRegistration()" class="bg-zinc-900 text-white border border-zinc-800 px-10 py-4 text-[10px] font-black uppercase tracking-widest hover:bg-zinc-800 transition">Join the Guard</button>
         </div>
     </header>
 
     <main class="max-w-7xl mx-auto py-24 px-6">
-        
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            
             <div class="space-y-6">
                 <h3 class="text-xs font-black text-white uppercase tracking-[0.3em] mb-4 border-l-2 border-blue-600 pl-4">Intelligence</h3>
-                <a href="exposed.html" class="nav-card p-6 block rounded-lg">
-                    <h4 class="text-white font-bold text-sm mb-1 uppercase">Exposed Feed</h4>
-                    <p class="text-[10px] leading-relaxed">Real-time alerts on algorithmic threats and data harvesting.</p>
-                </a>
-                <a href="heatmap.html" class="nav-card p-6 block rounded-lg">
-                    <h4 class="text-white font-bold text-sm mb-1 uppercase">Global Heatmap</h4>
-                    <p class="text-[10px] leading-relaxed">Visualizing surveillance clusters across 190 countries.</p>
-                </a>
-                <a href="investigations.html" class="nav-card p-6 block rounded-lg">
-                    <h4 class="text-white font-bold text-sm mb-1 uppercase">Forensics</h4>
-                    <p class="text-[10px] leading-relaxed">Deep-dive technical reports on systemic tech abuse.</p>
-                </a>
+                <a href="exposed.html" class="nav-card p-6 block rounded-lg"><h4 class="text-white font-bold text-sm mb-1 uppercase">Exposed Feed</h4><p class="text-[10px] leading-relaxed">Real-time alerts on algorithmic threats and data harvesting.</p></a>
+                <a href="heatmap.html" class="nav-card p-6 block rounded-lg"><h4 class="text-white font-bold text-sm mb-1 uppercase">Global Heatmap</h4><p class="text-[10px] leading-relaxed">Visualizing surveillance clusters across 190 countries.</p></a>
+                <a href="investigations.html" class="nav-card p-6 block rounded-lg"><h4 class="text-white font-bold text-sm mb-1 uppercase">Forensics</h4><p class="text-[10px] leading-relaxed">Deep-dive technical reports on systemic tech abuse.</p></a>
             </div>
 
             <div class="space-y-6">
                 <h3 class="text-xs font-black text-white uppercase tracking-[0.3em] mb-4 border-l-2 border-blue-600 pl-4">Defense</h3>
-                <a href="shield.html" class="nav-card p-6 block rounded-lg">
-                    <h4 class="text-white font-bold text-sm mb-1 uppercase">Browser Shield</h4>
-                    <p class="text-[10px] leading-relaxed">Anti-tracking browser extension for the modern web.</p>
-                </a>
-                <a href="app-hub.html" class="nav-card p-6 block rounded-lg">
-                    <h4 class="text-white font-bold text-sm mb-1 uppercase">Mobile Sentinel</h4>
-                    <p class="text-[10px] leading-relaxed">Hardware-level audit tools for iOS and Android.</p>
-                </a>
-                <a href="toolkit.html" class="nav-card p-6 block rounded-lg">
-                    <h4 class="text-white font-bold text-sm mb-1 uppercase">Defense Toolkit</h4>
-                    <p class="text-[10px] leading-relaxed">Step-by-step guides for physical and digital privacy.</p>
-                </a>
+                <a href="shield.html" class="nav-card p-6 block rounded-lg"><h4 class="text-white font-bold text-sm mb-1 uppercase">Browser Shield</h4><p class="text-[10px] leading-relaxed">Anti-tracking browser extension for the modern web.</p></a>
+                <a href="app-hub.html" class="nav-card p-6 block rounded-lg"><h4 class="text-white font-bold text-sm mb-1 uppercase">Mobile Sentinel</h4><p class="text-[10px] leading-relaxed">Hardware-level audit tools for iOS and Android.</p></a>
+                <a href="toolkit.html" class="nav-card p-6 block rounded-lg"><h4 class="text-white font-bold text-sm mb-1 uppercase">Defense Toolkit</h4><p class="text-[10px] leading-relaxed">Step-by-step guides for physical and digital privacy.</p></a>
             </div>
 
             <div class="space-y-6">
                 <h3 class="text-xs font-black text-white uppercase tracking-[0.3em] mb-4 border-l-2 border-blue-600 pl-4">Community</h3>
-                <a href="hubs.html" class="nav-card p-6 block rounded-lg">
-                    <h4 class="text-white font-bold text-sm mb-1 uppercase">Regional Hubs</h4>
-                    <p class="text-[10px] leading-relaxed">Find local Guard nodes and physical meetups.</p>
-                </a>
-                <a href="academy.html" class="nav-card p-6 block rounded-lg">
-                    <h4 class="text-white font-bold text-sm mb-1 uppercase">AEAH Academy</h4>
-                    <p class="text-[10px] leading-relaxed">Master the ethics of design and data sovereignty.</p>
-                </a>
-                <a href="forum.html" class="nav-card p-6 block rounded-lg">
-                    <h4 class="text-white font-bold text-sm mb-1 uppercase">The War Room</h4>
-                    <p class="text-[10px] leading-relaxed">Secure communication and strategy for verified members.</p>
-                </a>
+                <a href="hubs.html" class="nav-card p-6 block rounded-lg"><h4 class="text-white font-bold text-sm mb-1 uppercase">Regional Hubs</h4><p class="text-[10px] leading-relaxed">Find local Guard nodes and physical meetups.</p></a>
+                <a href="academy.html" class="nav-card p-6 block rounded-lg"><h4 class="text-white font-bold text-sm mb-1 uppercase">AEAH Academy</h4><p class="text-[10px] leading-relaxed">Master the ethics of design and data sovereignty.</p></a>
+                <a href="forum.html" class="nav-card p-6 block rounded-lg"><h4 class="text-white font-bold text-sm mb-1 uppercase">The War Room</h4><p class="text-[10px] leading-relaxed">Secure communication and strategy for verified members.</p></a>
             </div>
 
             <div class="space-y-6">
                 <h3 class="text-xs font-black text-white uppercase tracking-[0.3em] mb-4 border-l-2 border-blue-600 pl-4">Action</h3>
-                <a href="rights.html" class="nav-card p-6 block rounded-lg">
-                    <h4 class="text-white font-bold text-sm mb-1 uppercase">Legislative Tracker</h4>
-                    <p class="text-[10px] leading-relaxed">Monitoring global digital rights bills in real-time.</p>
-                </a>
-                <a href="newsroom.html" class="nav-card p-6 block rounded-lg">
-                    <h4 class="text-white font-bold text-sm mb-1 uppercase">The Daily Signal</h4>
-                    <p class="text-[10px] leading-relaxed">Uncompromising journalism from the front lines.</p>
-                </a>
-                <a href="gear.html" class="nav-card p-6 block rounded-lg">
-                    <h4 class="text-white font-bold text-sm mb-1 uppercase">Tactical Gear</h4>
-                    <p class="text-[10px] leading-relaxed">Analog tools for a digital war. Faraday, slides, and more.</p>
-                </a>
+                <a href="rights.html" class="nav-card p-6 block rounded-lg"><h4 class="text-white font-bold text-sm mb-1 uppercase">Legislative Tracker</h4><p class="text-[10px] leading-relaxed">Monitoring global digital rights bills in real-time.</p></a>
+                <a href="newsroom.html" class="nav-card p-6 block rounded-lg"><h4 class="text-white font-bold text-sm mb-1 uppercase">The Daily Signal</h4><p class="text-[10px] leading-relaxed">Uncompromising journalism from the front lines.</p></a>
+                <a href="gear.html" class="nav-card p-6 block rounded-lg"><h4 class="text-white font-bold text-sm mb-1 uppercase">Tactical Gear</h4><p class="text-[10px] leading-relaxed">Analog tools for a digital war. Faraday, slides, and more.</p></a>
             </div>
-
         </div>
     </main>
 
@@ -157,5 +145,61 @@
         Protecting the biological core. // AEAH.ORG 2026
     </footer>
 
+    <div id="regModal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/95 backdrop-blur-xl">
+        <div class="bg-zinc-950 border border-zinc-800 w-full max-w-2xl p-8 relative overflow-y-auto max-h-[90vh] shadow-2xl">
+            <button onclick="toggleRegistration()" class="absolute top-6 right-6 text-zinc-500 hover:text-white text-2xl">&times;</button>
+            <header class="mb-6 border-b border-zinc-800 pb-4">
+                <h2 class="text-2xl font-black text-white uppercase tracking-tighter">Personnel Enrollment</h2>
+                <p class="text-[10px] text-blue-500 font-bold uppercase tracking-widest mt-1 italic">Founded by a Survivor of 20 Years</p>
+            </header>
+
+            <div class="bg-blue-900/10 border-l-4 border-blue-500 p-4 mb-6">
+                <p class="text-[11px] text-zinc-300 leading-relaxed uppercase font-semibold">
+                    <i class="fa-solid fa-shield-halved mr-2 text-blue-500"></i>
+                    <strong>Important Note:</strong> Your information is absolutely safe with this nonprofit. We never sell or use data for external purposes. We are dedicated to bringing down the gang-stalking systems bothering Americans.
+                </p>
+            </div>
+
+            <form class="grid md:grid-cols-2 gap-4">
+                <input type="text" placeholder="FIRST NAME" class="bg-zinc-900 border border-zinc-800 p-3 text-white text-xs outline-none focus:border-blue-500" required>
+                <input type="text" placeholder="LAST NAME" class="bg-zinc-900 border border-zinc-800 p-3 text-white text-xs outline-none focus:border-blue-500" required>
+                <input type="email" placeholder="EMAIL ADDRESS" class="bg-zinc-900 border border-zinc-800 p-3 text-white text-xs outline-none focus:border-blue-500" required>
+                <input type="tel" placeholder="PHONE NUMBER" class="bg-zinc-900 border border-zinc-800 p-3 text-white text-xs outline-none focus:border-blue-500" required>
+                
+                <div class="md:col-span-2 mt-2">
+                    <div class="bg-zinc-900/50 border border-zinc-800 p-4 mb-2">
+                        <p class="text-[10px] text-blue-400 font-bold uppercase leading-tight">
+                            <i class="fa-solid fa-map-location-dot mr-2"></i> Strategic Requirement: Address
+                        </p>
+                        <p class="text-[9px] text-zinc-500 mt-1 uppercase leading-snug">
+                            Address data is vital to <span class="text-white">Geo-Locate incidents</span>. Mapping these harassment hotspots is critical for documenting the system's reach and providing legal evidence.
+                        </p>
+                    </div>
+                    <input type="text" placeholder="PHYSICAL ADDRESS (STREET, CITY, STATE, ZIP)" class="w-full bg-zinc-900 border border-zinc-800 p-3 text-white text-xs outline-none focus:border-blue-500" required>
+                </div>
+
+                <button type="submit" class="md:col-span-2 bg-white text-black py-4 font-black uppercase tracking-widest text-xs hover:bg-blue-600 hover:text-white transition mt-4">
+                    Complete Secure Registration
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div id="loginModal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/95 backdrop-blur-xl">
+        <div class="bg-zinc-950 border border-zinc-800 w-full max-w-sm p-8 relative shadow-2xl">
+            <button onclick="toggleLogin()" class="absolute top-6 right-6 text-zinc-500 hover:text-white text-2xl">&times;</button>
+            <h2 class="text-xl font-black text-white uppercase tracking-tighter mb-6">Secure Sign In</h2>
+            <form class="space-y-4">
+                <input type="email" placeholder="EMAIL" class="w-full bg-zinc-900 border border-zinc-800 p-3 text-white text-xs outline-none focus:border-blue-500" required>
+                <input type="password" placeholder="PASSWORD" class="w-full bg-zinc-900 border border-zinc-800 p-3 text-white text-xs outline-none focus:border-blue-500" required>
+                <button type="submit" class="w-full bg-blue-600 text-white py-3 font-black uppercase tracking-widest text-[10px] hover:bg-blue-500 transition">Authenticate</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function toggleRegistration() { document.getElementById('regModal').classList.toggle('hidden'); }
+        function toggleLogin() { document.getElementById('loginModal').classList.toggle('hidden'); }
+    </script>
 </body>
 </html>
